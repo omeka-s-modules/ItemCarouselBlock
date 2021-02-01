@@ -1,0 +1,89 @@
+<div style="position:relative;">
+	<?php
+		$this->headLink()->appendStylesheet($this->assetUrl('vendor/slick/slick.css', 'CarouselBrowse'));
+		$this->headLink()->appendStylesheet($this->assetUrl('vendor/slick/slick-theme.css', 'CarouselBrowse'));
+		$this->headScript()->appendFile($this->assetUrl('vendor/slick/slick.min.js', 'CarouselBrowse'));
+	?>
+
+	<?php if ($this->carouselHeading): ?>
+	<h2><?php echo $this->carouselHeading; ?></h2>
+	<?php endif; ?>
+	<div class="carousel">
+	<?php
+		foreach ($attachments as $attachment) {
+			$item = $attachment->item();
+			$caption = $attachment->caption();
+			$media = $attachment->media() ?: $item->primaryMedia();
+			$caption = $this->showCaption == 'true' ? $attachment->caption() : '';
+			$title = '';
+						
+			if ($this->showTitleOption == 'item_title') {
+				$title = $item->displayTitle();
+			} elseif ($this->showTitleOption == 'file_name') {			
+				$title = $media ? $media->displayTitle() : $item->displayTitle();
+			}
+			
+			if ($media) {
+				$slide = sprintf('<img src="%s"><div>%s%s</div>', $media->thumbnailUrl($this->thumbnailType), $title, $caption);
+				echo $item->linkRaw($slide);
+				echo $this->$perPage;
+			} else {
+				$slide = '<div>' . $title . $caption . '</div>';
+				echo $item->linkRaw($slide);
+			} 
+		}
+	?>
+	</div>
+
+	<script>
+	$(document).ready(function() {
+		$('.carousel')
+			.slick({
+				slidesToShow: <?php echo $this->perPage ?>,
+				slidesToScroll: <?php echo $this->perScroll ?>,
+				infinite: <?php echo $this->loop ?>,
+				draggable: <?php echo $this->draggable ?>,
+				fade: <?php echo $this->fade ?>,
+				autoplay: <?php echo $this->autoSlide ?>,
+				autoplaySpeed: <?php echo $this->autoSlideDuration ?>,
+				pauseOnHover: <?php echo $this->pauseOnHover ?>,
+				centerMode: <?php echo $this->centerMode ?>,
+				arrows: <?php echo $this->arrows ?>,
+				dots: <?php echo $this->dots ?>,
+				adaptiveHeight: true,
+			});
+		$('.slick-slide').css({
+				'padding': '<?php echo $this->slideCSSPadding ?>',
+				'text-align': '<?php echo $this->slideCSSTextAlign ?>',
+				'color': '<?php echo $this->slideCSSTextColor ?>',
+				'font-size': '<?php echo $this->slideCSSTextSize ?>',
+			});
+		$('.slick-slide > div').css({
+				'background-color': '<?php echo $this->slideCSSBGColor ?>',
+			});
+		<?php if ($this->slideCSSStretch == 'true'): ?>
+			$('.slick-slide > img').css({
+				'width': '100%',
+				'height': '100%',
+			});
+		<?php endif; ?>
+		<?php if ($this->floatCaption == 'true'): ?>
+			$('.slick-slide > div').css({
+				'position': 'absolute',
+				'margin': '',
+			});			
+			$('.slick-slide > img').css({
+				'margin': '',
+			});
+			$('.slick-track .slick-slide').css({
+				'display': 'flex',
+			});
+		<?php endif; ?>
+		$('.slick-slide').each(function(){
+			// Match caption div width to each image 
+			var imgWidth = $(this).children('img').width();
+			$(this).children('div').css('width', imgWidth);
+		});
+	});
+	</script>
+</div>
