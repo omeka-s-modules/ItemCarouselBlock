@@ -180,7 +180,7 @@ class Carousel extends AbstractBlockLayout
             'type' => Element\Number::class,
             'options' => [
 				'label' => 'Items per scroll', // @translate
-				'info' => 'The number of item slides to advance.' // @translate
+				'info' => 'The number of item slides to advance on click/swipe' // @translate
             ],
 			'attributes' => [
 				'min' => 1,
@@ -193,7 +193,7 @@ class Carousel extends AbstractBlockLayout
 			'type' => Element\Text::class,
             'options' => [
 				'label' => 'Slide Padding', // @translate
-				'info' => 'Spacing/padding between slides in CSS syntax' // @translate
+				'info' => 'CSS Padding space between slides. Default is 0 10px' // @translate
 			]
 		]);
 		
