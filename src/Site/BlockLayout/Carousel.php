@@ -108,6 +108,15 @@ class Carousel extends AbstractBlockLayout
 			]
 		]);
         
+		// disable fade if more than one item per page since it doesn't display correctly
+		if ($data['perPage'] > 1) {
+			$disabledFade = true;
+			$fade = 'false';
+		} else {
+			$disabledFade = false;
+			$fade = $data['fade'];
+		}
+		
         $carouselForm->add([
 			'name' => 'o:block[__blockIndex__][o:data][fade]',
 			'type' => Element\Checkbox::class,
@@ -116,6 +125,9 @@ class Carousel extends AbstractBlockLayout
                 'info' => 'Note: only works with 1 item per page', // @translate
                 'checked_value' => 'true',
                 'unchecked_value' => 'false',
+			],
+			'attributes' => [
+				'disabled' => $disabledFade,
 			]
 		]);
 
@@ -255,6 +267,12 @@ class Carousel extends AbstractBlockLayout
 				'info' => 'Use color name, hex value, or RGB/RGBA value' // @translate
 			]
 		]);
+		
+		$writer = new \Laminas\Log\Writer\Stream('logs/application.log');
+		$logger = new \Laminas\Log\Logger();
+		$logger->addWriter($writer);
+
+		$logger->info($fade);
 
 		$carouselForm->setData([
 			'o:block[__blockIndex__][o:data][carouselHeading]' => $data['carouselHeading'],
@@ -263,7 +281,7 @@ class Carousel extends AbstractBlockLayout
 			'o:block[__blockIndex__][o:data][pauseOnHover]' => $data['pauseOnHover'],
 			'o:block[__blockIndex__][o:data][loop]' => $data['loop'],
 			'o:block[__blockIndex__][o:data][draggable]' => $data['draggable'],
-			'o:block[__blockIndex__][o:data][fade]' => $data['fade'],
+			'o:block[__blockIndex__][o:data][fade]' => $fade,
             'o:block[__blockIndex__][o:data][centerMode]' => $data['centerMode'],
             'o:block[__blockIndex__][o:data][dots]' => $data['dots'],
 			'o:block[__blockIndex__][o:data][arrows]' => $data['arrows'],
@@ -315,6 +333,7 @@ class Carousel extends AbstractBlockLayout
 
         $thumbnailType = $block->dataValue('thumbnail_type', 'large');
         $showTitleOption = $block->dataValue('show_title_option', 'item_title');
+		
         return $view->partial('common/block-layout/carousel-browse', [
             'attachments' => $attachments,
 			'carouselHeading' => $block->dataValue('carouselHeading'),
@@ -323,7 +342,8 @@ class Carousel extends AbstractBlockLayout
 			'pauseOnHover' => $block->dataValue('pauseOnHover'),
 			'loop' => $block->dataValue('loop'),
             'draggable' => $block->dataValue('draggable'),
-            'fade' => $block->dataValue('fade'),
+            // 'fade' => $block->dataValue('fade'),
+			'fade' => 'false',
             'centerMode' => $block->dataValue('centerMode'),
             'dots' => $block->dataValue('dots'),
 			'arrows' => $block->dataValue('arrows'),

@@ -43,7 +43,9 @@
 				slidesToScroll: <?php echo $this->perScroll ?>,
 				infinite: <?php echo $this->loop ?>,
 				draggable: <?php echo $this->draggable ?>,
+				<?php if ($this->fade): ?>
 				fade: <?php echo $this->fade ?>,
+				<?php endif; ?>
 				autoplay: <?php echo $this->autoSlide ?>,
 				autoplaySpeed: <?php echo $this->autoSlideDuration ?>,
 				pauseOnHover: <?php echo $this->pauseOnHover ?>,
