@@ -81,6 +81,11 @@
 				'display': 'flex',
 			});
 		<?php endif; ?>
+		<?php if ($this->thumbnailType != 'large'): ?>
+			$('.slick-track .slick-slide').css({
+				'align-items': 'center',
+			});
+		<?php endif; ?>
 		$('.slick-slide').each(function(){
 			// Match caption div width to each image 
 			var imgWidth = $(this).children('img').width();

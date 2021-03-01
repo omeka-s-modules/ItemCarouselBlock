@@ -130,7 +130,6 @@
 {
   display: flex;
   height: auto;
-  align-items: center;
   justify-content: flex-end;
 }
 .slick-arrow.slick-hidden {

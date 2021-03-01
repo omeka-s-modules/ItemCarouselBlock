@@ -267,12 +267,6 @@ class Carousel extends AbstractBlockLayout
 				'info' => 'Use color name, hex value, or RGB/RGBA value' // @translate
 			]
 		]);
-		
-		$writer = new \Laminas\Log\Writer\Stream('logs/application.log');
-		$logger = new \Laminas\Log\Logger();
-		$logger->addWriter($writer);
-
-		$logger->info($fade);
 
 		$carouselForm->setData([
 			'o:block[__blockIndex__][o:data][carouselHeading]' => $data['carouselHeading'],
@@ -342,8 +336,7 @@ class Carousel extends AbstractBlockLayout
 			'pauseOnHover' => $block->dataValue('pauseOnHover'),
 			'loop' => $block->dataValue('loop'),
             'draggable' => $block->dataValue('draggable'),
-            // 'fade' => $block->dataValue('fade'),
-			'fade' => 'false',
+            'fade' => $block->dataValue('fade'),
             'centerMode' => $block->dataValue('centerMode'),
             'dots' => $block->dataValue('dots'),
 			'arrows' => $block->dataValue('arrows'),
