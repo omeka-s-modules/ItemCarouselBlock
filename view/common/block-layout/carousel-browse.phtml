@@ -12,7 +12,6 @@
 	<?php
 		foreach ($attachments as $attachment) {
 			$item = $attachment->item();
-			$caption = $attachment->caption();
 			$media = $attachment->media() ?: $item->primaryMedia();
 			$caption = $this->showCaption == 'true' ? $attachment->caption() : '';
 			$title = '';
@@ -23,12 +22,17 @@
 				$title = $media ? $media->displayTitle() : $item->displayTitle();
 			}
 			
+			if ($this->showTitleOption == 'no_title' && $this->showCaption == 'false') {
+				$textDiv = '';
+			} else {			
+				$textDiv = sprintf('<div>%s%s</div>', $title, $caption);
+			}
+			
 			if ($media) {
-				$slide = sprintf('<img src="%s"><div>%s%s</div>', $media->thumbnailUrl($this->thumbnailType), $title, $caption);
+				$slide = '<img src="' . $media->thumbnailUrl($this->thumbnailType) . '">' . $textDiv;
 				echo $item->linkRaw($slide);
-				echo $this->$perPage;
 			} else {
-				$slide = '<div>' . $title . $caption . '</div>';
+				$slide = $textDiv;
 				echo $item->linkRaw($slide);
 			} 
 		}

@@ -264,7 +264,7 @@ class Carousel extends AbstractBlockLayout
 			'type' => Element\Text::class,
             'options' => [
 				'label' => 'Text background color/opacity', // @translate
-				'info' => 'Use color name, hex value, or RGB/RGBA value' // @translate
+				'info' => 'Use color name, hex value, or RGB value. For opacity/blur, use RGBA. Example: rgba(0, 255, 0, 0.3).' // @translate
 			]
 		]);
 

@@ -84,7 +84,7 @@
     min-height: 1px;
     text-align: center;
     line-height: 1;
-    width: 100%;
+    /* width: 100%; */
 }
 [dir='rtl'] .slick-slide
 {
@@ -97,7 +97,6 @@
     left: 0;
 }
 .slick-slide > div {
-    bottom: 0;
     margin: 0;
     display: block;
     padding: 2px;
