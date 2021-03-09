@@ -22,7 +22,6 @@
 {
     position: relative;
 
-    /* display: flex; */
     overflow: hidden;
 
     margin: 0;
@@ -84,7 +83,7 @@
     min-height: 1px;
     text-align: center;
     line-height: 1;
-    /* width: 100%; */
+    outline: none;
 }
 [dir='rtl'] .slick-slide
 {
