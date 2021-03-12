@@ -1,5 +1,5 @@
 <?php
-namespace CarouselBrowse;
+namespace CarouselBrowseBlock;
 
 return [
     'view_manager' => [
