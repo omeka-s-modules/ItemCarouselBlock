@@ -1,5 +1,5 @@
 <?php
-namespace CarouselBrowse\Site\BlockLayout;
+namespace CarouselBrowseBlock\Site\BlockLayout;
 
 use Omeka\Api\Representation\SiteRepresentation;
 use Omeka\Api\Representation\SitePageRepresentation;
