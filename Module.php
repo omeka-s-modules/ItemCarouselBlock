@@ -1,5 +1,5 @@
 <?php
-namespace CarouselBrowseBlock;
+namespace ItemCarouselBlock;
 
 use Omeka\Module\AbstractModule;
 use Zend\EventManager\SharedEventManagerInterface;

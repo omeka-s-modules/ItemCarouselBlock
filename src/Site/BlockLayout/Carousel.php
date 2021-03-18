@@ -1,5 +1,5 @@
 <?php
-namespace CarouselBrowseBlock\Site\BlockLayout;
+namespace ItemCarouselBlock\Site\BlockLayout;
 
 use Omeka\Api\Representation\SiteRepresentation;
 use Omeka\Api\Representation\SitePageRepresentation;
@@ -9,13 +9,13 @@ use Laminas\Form\Element;
 use Laminas\Form\Form;
 use Laminas\View\Renderer\PhpRenderer;
 
-use CarouselBrowse\Form\CarouselBlockForm;
+use ItemCarousel\Form\CarouselBlockForm;
 
 class Carousel extends AbstractBlockLayout
 {
 
 	public function getLabel() {
-		return 'Carousel browse'; // @translate
+		return 'Item Carousel'; // @translate
 	}
 
 	public function form(PhpRenderer $view, SiteRepresentation $site,
@@ -184,7 +184,7 @@ class Carousel extends AbstractBlockLayout
         $thumbnailType = $block->dataValue('thumbnail_type', 'large');
         $showTitleOption = $block->dataValue('show_title_option', 'item_title');
 		
-        return $view->partial('common/block-layout/carousel-browse', [
+        return $view->partial('common/block-layout/item-carousel', [
             'attachments' => $attachments,
 			'carouselHeading' => $block->dataValue('carouselHeading'),
             'autoSlideDuration' => $block->dataValue('autoSlideDuration'),

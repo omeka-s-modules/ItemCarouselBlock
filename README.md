@@ -1,4 +1,4 @@
-# Carousel Browse Block
+# Item Carousel Block
 
 Adds a page block featuring a configurable carousel for selecting and displaying resources on an [Omeka S](https://omeka.org/s/) site. 
 
