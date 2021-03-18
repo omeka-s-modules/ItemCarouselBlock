@@ -23,34 +23,22 @@ class Carousel extends AbstractBlockLayout
     ) {
         $defaults = [
             'carouselHeading' => '',
-			'autoSlide' => 'false',
-            'autoSlideDuration' => 5000,
-			'pauseOnHover' => 'true',
+            'autoSlideDuration' => 0,
 			'loop' => 'true',
-            'draggable' => 'true',
             'fade' => 'false',
-            'centerMode' => 'false',
-            'dots' => 'true',
-			'arrows' => 'true',
             'perPage' => 1,
-            'perScroll' => 1,
-			'slideCSSPadding' => '0 10px',
 			'SlideCSSStretch' => 'false',
 			'showCaption' => 'false',
 			'floatCaption' => 'false',
 			'slideCSSTextAlign' => 'center',
-			'slideCSSTextColor' => '',
-			'slideCSSTextSize' => '',
-			'slideCSSBGColor' => '',
         ];
 
         $data = $block ? $block->data() + $defaults : $defaults;
         
-        $carouselForm = new Form();
-		$slideForm = new Form();
-		$textForm = new Form();
+        $basicForm = new Form();
+		$advancedForm = new Form();
 		
-		$carouselForm->add([
+		$basicForm->add([
 			'name' => 'o:block[__blockIndex__][o:data][carouselHeading]',
 			'type' => Element\Text::class,
 			'options' => [
@@ -58,51 +46,33 @@ class Carousel extends AbstractBlockLayout
 			]
 		]);
 		
-		$carouselForm->add([
-			'name' => 'o:block[__blockIndex__][o:data][autoSlide]',
-			'type' => Element\Checkbox::class,
-            'options' => [
-				'label' => 'Auto slide', // @translate
-                'checked_value' => 'true',
-                'unchecked_value' => 'false',
+		$basicForm->add([
+			'name' => 'o:block[__blockIndex__][o:data][perPage]',
+			'type' => Element\Number::class,
+			'options' => [
+				'label' => 'Items per page', // @translate
+				'info' => 'The number of item slides shown per page' // @translate
+			],
+			'attributes' => [
+				'min' => 1,
+				'max' => 10,
 			]
 		]);
 
-		$carouselForm->add([
+		$advancedForm->add([
 			'name' => 'o:block[__blockIndex__][o:data][autoSlideDuration]',
 			'type' => Element\Text::class,
             'options' => [
 				'label' => 'Auto slide duration', // @translate
-				'info' => 'Time (in milliseconds) to pause before auto advance' // @translate
+				'info' => 'Time in milliseconds to pause before auto advance (set to 0 to turn off)' // @translate
 			]
 		]);
 		
-		$carouselForm->add([
-			'name' => 'o:block[__blockIndex__][o:data][pauseOnHover]',
-			'type' => Element\Checkbox::class,
-			'options' => [
-				'label' => 'Pause auto slide on hover', // @translate
-				'checked_value' => 'true',
-				'unchecked_value' => 'false',
-			]
-		]);
-		
-		$carouselForm->add([
+		$advancedForm->add([
 			'name' => 'o:block[__blockIndex__][o:data][loop]',
 			'type' => Element\Checkbox::class,
             'options' => [
 				'label' => 'Infinite loop', // @translate
-                'checked_value' => 'true',
-                'unchecked_value' => 'false',
-			]
-		]);
-
-		$carouselForm->add([
-			'name' => 'o:block[__blockIndex__][o:data][draggable]',
-			'type' => Element\Checkbox::class,
-            'options' => [
-				'label' => 'Draggable', // @translate
-                'info' => 'Drag/swipe to advance', // @translate
                 'checked_value' => 'true',
                 'unchecked_value' => 'false',
 			]
@@ -117,7 +87,7 @@ class Carousel extends AbstractBlockLayout
 			$fade = $data['fade'];
 		}
 		
-        $carouselForm->add([
+        $advancedForm->add([
 			'name' => 'o:block[__blockIndex__][o:data][fade]',
 			'type' => Element\Checkbox::class,
             'options' => [
@@ -130,74 +100,8 @@ class Carousel extends AbstractBlockLayout
 				'disabled' => $disabledFade,
 			]
 		]);
-
-        $carouselForm->add([
-			'name' => 'o:block[__blockIndex__][o:data][centerMode]',
-			'type' => Element\Checkbox::class,
-            'options' => [
-				'label' => 'Center mode', // @translate
-                'info' => 'Note: overrides items per scroll', // @translate
-                'checked_value' => 'true',
-                'unchecked_value' => 'false',
-			]
-		]);
-        
-        $carouselForm->add([
-			'name' => 'o:block[__blockIndex__][o:data][dots]',
-			'type' => Element\Checkbox::class,
-            'options' => [
-				'label' => 'Show navigation dots', // @translate
-                'checked_value' => 'true',
-                'unchecked_value' => 'false',
-			]
-		]);
 		
-		$carouselForm->add([
-			'name' => 'o:block[__blockIndex__][o:data][arrows]',
-			'type' => Element\Checkbox::class,
-            'options' => [
-				'label' => 'Show navigation arrows', // @translate
-                'checked_value' => 'true',
-                'unchecked_value' => 'false',
-			]
-		]);
-
-		$slideForm->add([
-			'name' => 'o:block[__blockIndex__][o:data][perPage]',
-            'type' => Element\Number::class,
-            'options' => [
-				'label' => 'Items per page', // @translate
-				'info' => 'The number of item slides shown per page.' // @translate
-			],
-			'attributes' => [
-				'min' => 1,
-                'max' => 10,
-			]
-		]);
-        
-        $slideForm->add([
-			'name' => 'o:block[__blockIndex__][o:data][perScroll]',
-            'type' => Element\Number::class,
-            'options' => [
-				'label' => 'Items per scroll', // @translate
-				'info' => 'The number of item slides to advance on click/swipe' // @translate
-            ],
-			'attributes' => [
-				'min' => 1,
-                'max' => 10,
-			]
-		]);
-		
-		$slideForm->add([
-			'name' => 'o:block[__blockIndex__][o:data][slideCSSPadding]',
-			'type' => Element\Text::class,
-            'options' => [
-				'label' => 'Slide Padding', // @translate
-				'info' => 'CSS Padding space between slides. Default is 0 10px' // @translate
-			]
-		]);
-		
-		$slideForm->add([
+		$advancedForm->add([
 			'name' => 'o:block[__blockIndex__][o:data][SlideCSSStretch]',
 			'type' => Element\Checkbox::class,
 			'options' => [
@@ -207,7 +111,7 @@ class Carousel extends AbstractBlockLayout
 			]
 		]);
 		
-		$textForm->add([
+		$advancedForm->add([
 			'name' => 'o:block[__blockIndex__][o:data][showCaption]',
 			'type' => Element\Checkbox::class,
 			'options' => [
@@ -217,18 +121,18 @@ class Carousel extends AbstractBlockLayout
 			]
 		]);
 		
-		$textForm->add([
+		$advancedForm->add([
 			'name' => 'o:block[__blockIndex__][o:data][floatCaption]',
 			'type' => Element\Checkbox::class,
 			'options' => [
 				'label' => 'Float title/caption', // @translate
-				'info' => 'Superimpose title/caption over image.', // @translate
+				'info' => 'Superimpose title/caption over image', // @translate
 				'checked_value' => 'true',
 				'unchecked_value' => 'false',
 			]
 		]);
 		
-		$textForm->add([
+		$advancedForm->add([
 			'name' => 'o:block[__blockIndex__][o:data][slideCSSTextAlign]',
 			'type' => Element\Select::class,
             'options' => [
@@ -240,79 +144,31 @@ class Carousel extends AbstractBlockLayout
 		        ],
 			]
 		]);
-		
-		$textForm->add([
-			'name' => 'o:block[__blockIndex__][o:data][slideCSSTextColor]',
-			'type' => Element\Text::class,
-            'options' => [
-				'label' => 'Text color/opacity', // @translate
-				'info' => 'Use color name, hex value, or RGB/RGBA value. For opacity/blur, use RGBA. Example: rgba(0, 0, 255, 0.8).' // @translate
-			]
-		]);
-		
-		$textForm->add([
-			'name' => 'o:block[__blockIndex__][o:data][slideCSSTextSize]',
-			'type' => Element\Text::class,
-            'options' => [
-				'label' => 'Text size', // @translate
-				'info' => 'Use absolute, relative, percentage, length or global value' // @translate
-			]
-		]);
-		
-		$textForm->add([
-			'name' => 'o:block[__blockIndex__][o:data][slideCSSBGColor]',
-			'type' => Element\Text::class,
-            'options' => [
-				'label' => 'Text background color/opacity', // @translate
-				'info' => 'Use color name, hex value, or RGB value. For opacity/blur, use RGBA. Example: rgba(0, 255, 0, 0.3).' // @translate
-			]
-		]);
 
-		$carouselForm->setData([
+		$basicForm->setData([
 			'o:block[__blockIndex__][o:data][carouselHeading]' => $data['carouselHeading'],
-			'o:block[__blockIndex__][o:data][autoSlide]' => $data['autoSlide'],
-			'o:block[__blockIndex__][o:data][autoSlideDuration]' => $data['autoSlideDuration'],
-			'o:block[__blockIndex__][o:data][pauseOnHover]' => $data['pauseOnHover'],
-			'o:block[__blockIndex__][o:data][loop]' => $data['loop'],
-			'o:block[__blockIndex__][o:data][draggable]' => $data['draggable'],
-			'o:block[__blockIndex__][o:data][fade]' => $fade,
-            'o:block[__blockIndex__][o:data][centerMode]' => $data['centerMode'],
-            'o:block[__blockIndex__][o:data][dots]' => $data['dots'],
-			'o:block[__blockIndex__][o:data][arrows]' => $data['arrows'],
-		]);
-		$slideForm->setData([
 			'o:block[__blockIndex__][o:data][perPage]' => $data['perPage'],
-			'o:block[__blockIndex__][o:data][perScroll]' => $data['perScroll'],
-			'o:block[__blockIndex__][o:data][slideCSSPadding]' => $data['slideCSSPadding'],
-			'o:block[__blockIndex__][o:data][SlideCSSStretch]' => $data['SlideCSSStretch'],
 		]);
-		$textForm->setData([
+		$advancedForm->setData([
 			'o:block[__blockIndex__][o:data][showCaption]' => $data['showCaption'],
 			'o:block[__blockIndex__][o:data][floatCaption]' => $data['floatCaption'],
 			'o:block[__blockIndex__][o:data][slideCSSTextAlign]' => $data['slideCSSTextAlign'],
-			'o:block[__blockIndex__][o:data][slideCSSTextColor]' => $data['slideCSSTextColor'],
-			'o:block[__blockIndex__][o:data][slideCSSTextSize]' => $data['slideCSSTextSize'],
-			'o:block[__blockIndex__][o:data][slideCSSBGColor]' => $data['slideCSSBGColor'],
+			'o:block[__blockIndex__][o:data][loop]' => $data['loop'],
+			'o:block[__blockIndex__][o:data][fade]' => $fade,
+			'o:block[__blockIndex__][o:data][SlideCSSStretch]' => $data['SlideCSSStretch'],
+			'o:block[__blockIndex__][o:data][autoSlideDuration]' => $data['autoSlideDuration'],
 		]);
-		$carouselForm->prepare();
-		$slideForm->prepare();
-		$textForm->prepare();
+		$basicForm->prepare();
+		$advancedForm->prepare();
 
 		$html = '';
 		$html .= $view->blockAttachmentsForm($block);
-		$html .= '<a href="#" class="collapse" aria-label="collapse"><h4>' . $view->translate('Carousel Options'). '</h4></a>';
-		$html .= '<div class="collapsible">';
-		$html .= $view->formCollection($carouselForm);
-		$html .= '</div>';
-		$html .= '<a href="#" class="collapse" aria-label="collapse"><h4>' . $view->translate('Slide Options'). '</h4></a>';
+		$html .= $view->formCollection($basicForm);
+		$html .= '<a href="#" class="expand" aria-label="expand"><h4>' . $view->translate('Advanced Options'). '</h4></a>';
 		$html .= '<div class="collapsible">';
 		$html .= $view->blockThumbnailTypeSelect($block);
-		$html .= $view->formCollection($slideForm);
-		$html .= '</div>';
-		$html .= '<a href="#" class="collapse" aria-label="collapse"><h4>' . $view->translate('Text Options'). '</h4></a>';
-		$html .= '<div class="collapsible">';
 		$html .= $view->blockShowTitleSelect($block);
-		$html .= $view->formCollection($textForm);
+		$html .= $view->formCollection($advancedForm);
 		$html .= '</div>';
 		return $html;
     }
@@ -331,27 +187,17 @@ class Carousel extends AbstractBlockLayout
         return $view->partial('common/block-layout/carousel-browse', [
             'attachments' => $attachments,
 			'carouselHeading' => $block->dataValue('carouselHeading'),
-			'autoSlide' => $block->dataValue('autoSlide'),
             'autoSlideDuration' => $block->dataValue('autoSlideDuration'),
-			'pauseOnHover' => $block->dataValue('pauseOnHover'),
 			'loop' => $block->dataValue('loop'),
             'draggable' => $block->dataValue('draggable'),
             'fade' => $block->dataValue('fade'),
-            'centerMode' => $block->dataValue('centerMode'),
-            'dots' => $block->dataValue('dots'),
-			'arrows' => $block->dataValue('arrows'),
 			'thumbnailType' => $thumbnailType,
 			'perPage' => $block->dataValue('perPage'),
-            'perScroll' => $block->dataValue('perScroll'),
-			'slideCSSPadding' => $block->dataValue('slideCSSPadding'),
 			'slideCSSStretch' => $block->dataValue('SlideCSSStretch'),
             'showTitleOption' => $showTitleOption,
 			'showCaption' => $block->dataValue('showCaption'),
 			'floatCaption' => $block->dataValue('floatCaption'),
 			'slideCSSTextAlign' => $block->dataValue('slideCSSTextAlign'),
-			'slideCSSTextColor' => $block->dataValue('slideCSSTextColor'),
-			'slideCSSTextSize' => $block->dataValue('slideCSSTextSize'),
-			'slideCSSBGColor' => $block->dataValue('slideCSSBGColor'),
 		]);
 	}
 }

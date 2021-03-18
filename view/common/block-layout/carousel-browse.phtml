@@ -44,28 +44,24 @@
 		$('.carousel')
 			.slick({
 				slidesToShow: <?php echo $this->perPage ?>,
-				slidesToScroll: <?php echo $this->perScroll ?>,
+				slidesToScroll: 1,
 				infinite: <?php echo $this->loop ?>,
-				draggable: <?php echo $this->draggable ?>,
+				draggable: true,
 				<?php if ($this->fade): ?>
 				fade: <?php echo $this->fade ?>,
 				<?php endif; ?>
-				autoplay: <?php echo $this->autoSlide ?>,
+				<?php if ($this->autoSlideDuration > 0): ?>
+				autoplay: true,
 				autoplaySpeed: <?php echo $this->autoSlideDuration ?>,
-				pauseOnHover: <?php echo $this->pauseOnHover ?>,
-				centerMode: <?php echo $this->centerMode ?>,
-				arrows: <?php echo $this->arrows ?>,
-				dots: <?php echo $this->dots ?>,
+				<?php endif; ?>
+				pauseOnHover: true,
+				centerMode: false,
+				arrows: true,
+				dots: true,
 				adaptiveHeight: true,
 			});
 		$('.slick-slide').css({
-				'padding': '<?php echo $this->slideCSSPadding ?>',
 				'text-align': '<?php echo $this->slideCSSTextAlign ?>',
-				'color': '<?php echo $this->slideCSSTextColor ?>',
-				'font-size': '<?php echo $this->slideCSSTextSize ?>',
-			});
-		$('.slick-slide > div').css({
-				'background-color': '<?php echo $this->slideCSSBGColor ?>',
 			});
 		<?php if ($this->slideCSSStretch == 'true'): ?>
 			$('.slick-slide > img').css({
