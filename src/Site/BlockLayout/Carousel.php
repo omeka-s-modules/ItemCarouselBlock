@@ -125,8 +125,8 @@ class Carousel extends AbstractBlockLayout
 			'name' => 'o:block[__blockIndex__][o:data][floatCaption]',
 			'type' => Element\Checkbox::class,
 			'options' => [
-				'label' => 'Float title/caption', // @translate
-				'info' => 'Superimpose title/caption over image', // @translate
+				'label' => 'Overlay title/caption', // @translate
+				'info' => 'Place title/caption over image', // @translate
 				'checked_value' => 'true',
 				'unchecked_value' => 'false',
 			]
