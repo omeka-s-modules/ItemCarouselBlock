@@ -97,10 +97,13 @@
     top: 0;
     left: 0;
 }
-.slick-slide > div {
+.slick-slide .slide-text {
     margin: 0;
     display: block;
     padding: 2px;
+}
+.slick-slide .slide-text .title {
+    font-weight: bold;
 }
 .slick-slide.slick-loading img
 {

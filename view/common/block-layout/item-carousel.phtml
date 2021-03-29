@@ -24,8 +24,13 @@
 			
 			if ($this->showTitleOption == 'no_title' && $this->showCaption == 'false') {
 				$textDiv = '';
-			} else {			
-				$textDiv = sprintf('<div>%s%s</div>', $title, $caption);
+			} elseif ($this->showTitleOption == 'no_title' && $this->showCaption == 'true') {			
+				$textDiv = sprintf('<div class="slide-text"><div class="caption">%s</div></div>', $caption);
+			} elseif ($this->showTitleOption != 'no_title' && $this->showCaption == 'false') {			
+				$textDiv = sprintf('<div class="slide-text"><div class="title">%s</div></div>', $title);
+			} else {
+				$textDiv = sprintf('<div class="slide-text"><div class="title">%s</div><div class="caption">%s</div></div>', 
+				$title, $caption);
 			}
 			
 			if ($media) {
