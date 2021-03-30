@@ -68,10 +68,37 @@
 		$('.slick-slide').css({
 				'text-align': '<?php echo $this->slideCSSTextAlign ?>',
 			});
-		<?php if ($this->slideCSSStretch == 'true'): ?>
+		<?php if ($this->perPage > 1): ?>
+			$('.slick-track').css({
+				'align-items': 'center',
+			});
+		<?php endif; ?>
+		<?php if ($this->slideCSSStretch == 'width'): ?>
+			$('.slick-slide > img').css({
+				'width': '100%',
+				'object-fit': 'cover',
+			});
+			$('.slick-track').css({
+				'align-items': 'initial',
+			});
+		<?php endif; ?>
+		<?php if ($this->slideCSSStretch == 'height'): ?>
+			$('.slick-slide > img').css({
+				'height': '100%',
+				'object-fit': 'cover',
+			});
+			$('.slick-track').css({
+				'align-items': 'initial',
+			});
+		<?php endif; ?>
+		<?php if ($this->slideCSSStretch == 'entire'): ?>
 			$('.slick-slide > img').css({
 				'width': '100%',
 				'height': '100%',
+				'object-fit': 'cover',
+			});
+			$('.slick-track').css({
+				'align-items': 'initial',
 			});
 		<?php endif; ?>
 		<?php if ($this->floatCaption == 'true'): ?>

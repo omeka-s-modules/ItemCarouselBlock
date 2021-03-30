@@ -27,7 +27,7 @@ class Carousel extends AbstractBlockLayout
 			'loop' => 'true',
             'fade' => 'false',
             'perPage' => 1,
-			'SlideCSSStretch' => 'false',
+			'SlideCSSStretch' => 'none',
 			'showCaption' => 'false',
 			'floatCaption' => 'false',
 			'slideCSSTextAlign' => 'center',
@@ -103,11 +103,15 @@ class Carousel extends AbstractBlockLayout
 		
 		$advancedForm->add([
 			'name' => 'o:block[__blockIndex__][o:data][SlideCSSStretch]',
-			'type' => Element\Checkbox::class,
-			'options' => [
-				'label' => 'Stretch image to fill slide', // @translate
-				'checked_value' => 'true',
-				'unchecked_value' => 'false',
+			'type' => Element\Select::class,
+            'options' => [
+				'label' => 'Stretch Image', // @translate
+				'value_options' => [
+		            'none' => 'None', // @translate
+					'width' => 'Fill width', // @translate
+		            'height' => 'Fill height', // @translate
+		            'entire' => 'Fill entire slide', // @translate
+		        ],
 			]
 		]);
 		
