@@ -23,14 +23,14 @@ class Carousel extends AbstractBlockLayout
     ) {
         $defaults = [
             'carouselHeading' => '',
-            'autoSlideDuration' => 0,
-			'loop' => 'true',
-            'fade' => 'false',
-            'perPage' => 1,
-			'SlideCSSStretch' => 'none',
+			'perPage' => 1,
 			'showCaption' => 'false',
 			'floatCaption' => 'false',
 			'slideCSSTextAlign' => 'center',
+			'SlideCSSStretch' => 'none',
+            'autoSlideDuration' => 0,
+			'loop' => 'true',
+            'fade' => 'false',
         ];
 
         $data = $block ? $block->data() + $defaults : $defaults;
@@ -56,6 +56,54 @@ class Carousel extends AbstractBlockLayout
 			'attributes' => [
 				'min' => 1,
 				'max' => 10,
+			]
+		]);
+
+		$advancedForm->add([
+			'name' => 'o:block[__blockIndex__][o:data][showCaption]',
+			'type' => Element\Checkbox::class,
+			'options' => [
+				'label' => 'Show attachment caption', // @translate
+				'checked_value' => 'true',
+				'unchecked_value' => 'false',
+			]
+		]);
+
+		$advancedForm->add([
+			'name' => 'o:block[__blockIndex__][o:data][floatCaption]',
+			'type' => Element\Checkbox::class,
+			'options' => [
+				'label' => 'Overlay title/caption', // @translate
+				'info' => 'Place title/caption over image (may require adjusting theme CSS text settings)', // @translate
+				'checked_value' => 'true',
+				'unchecked_value' => 'false',
+			]
+		]);
+
+		$advancedForm->add([
+			'name' => 'o:block[__blockIndex__][o:data][slideCSSTextAlign]',
+			'type' => Element\Select::class,
+			'options' => [
+				'label' => 'Text align', // @translate
+				'value_options' => [
+					'left' => 'Left', // @translate
+					'center' => 'Center', // @translate
+					'right' => 'Right', // @translate
+				],
+			]
+		]);
+
+		$advancedForm->add([
+			'name' => 'o:block[__blockIndex__][o:data][SlideCSSStretch]',
+			'type' => Element\Select::class,
+            'options' => [
+				'label' => 'Stretch Image', // @translate
+				'value_options' => [
+		            'none' => 'None', // @translate
+					'width' => 'Fill width', // @translate
+		            'height' => 'Fill height', // @translate
+		            'entire' => 'Fill entire slide', // @translate
+		        ],
 			]
 		]);
 
@@ -100,54 +148,6 @@ class Carousel extends AbstractBlockLayout
 				'disabled' => $disabledFade,
 			]
 		]);
-		
-		$advancedForm->add([
-			'name' => 'o:block[__blockIndex__][o:data][SlideCSSStretch]',
-			'type' => Element\Select::class,
-            'options' => [
-				'label' => 'Stretch Image', // @translate
-				'value_options' => [
-		            'none' => 'None', // @translate
-					'width' => 'Fill width', // @translate
-		            'height' => 'Fill height', // @translate
-		            'entire' => 'Fill entire slide', // @translate
-		        ],
-			]
-		]);
-		
-		$advancedForm->add([
-			'name' => 'o:block[__blockIndex__][o:data][showCaption]',
-			'type' => Element\Checkbox::class,
-			'options' => [
-				'label' => 'Show attachment caption', // @translate
-				'checked_value' => 'true',
-				'unchecked_value' => 'false',
-			]
-		]);
-		
-		$advancedForm->add([
-			'name' => 'o:block[__blockIndex__][o:data][floatCaption]',
-			'type' => Element\Checkbox::class,
-			'options' => [
-				'label' => 'Overlay title/caption', // @translate
-				'info' => 'Place title/caption over image', // @translate
-				'checked_value' => 'true',
-				'unchecked_value' => 'false',
-			]
-		]);
-		
-		$advancedForm->add([
-			'name' => 'o:block[__blockIndex__][o:data][slideCSSTextAlign]',
-			'type' => Element\Select::class,
-            'options' => [
-				'label' => 'Text align', // @translate
-				'value_options' => [
-		            'left' => 'Left', // @translate
-		            'center' => 'Center', // @translate
-		            'right' => 'Right', // @translate
-		        ],
-			]
-		]);
 
 		$basicForm->setData([
 			'o:block[__blockIndex__][o:data][carouselHeading]' => $data['carouselHeading'],
@@ -157,10 +157,10 @@ class Carousel extends AbstractBlockLayout
 			'o:block[__blockIndex__][o:data][showCaption]' => $data['showCaption'],
 			'o:block[__blockIndex__][o:data][floatCaption]' => $data['floatCaption'],
 			'o:block[__blockIndex__][o:data][slideCSSTextAlign]' => $data['slideCSSTextAlign'],
-			'o:block[__blockIndex__][o:data][loop]' => $data['loop'],
-			'o:block[__blockIndex__][o:data][fade]' => $fade,
 			'o:block[__blockIndex__][o:data][SlideCSSStretch]' => $data['SlideCSSStretch'],
 			'o:block[__blockIndex__][o:data][autoSlideDuration]' => $data['autoSlideDuration'],
+			'o:block[__blockIndex__][o:data][loop]' => $data['loop'],
+			'o:block[__blockIndex__][o:data][fade]' => $fade,
 		]);
 		$basicForm->prepare();
 		$advancedForm->prepare();
@@ -191,17 +191,16 @@ class Carousel extends AbstractBlockLayout
         return $view->partial('common/block-layout/item-carousel', [
             'attachments' => $attachments,
 			'carouselHeading' => $block->dataValue('carouselHeading'),
-            'autoSlideDuration' => $block->dataValue('autoSlideDuration'),
-			'loop' => $block->dataValue('loop'),
-            'draggable' => $block->dataValue('draggable'),
-            'fade' => $block->dataValue('fade'),
-			'thumbnailType' => $thumbnailType,
 			'perPage' => $block->dataValue('perPage'),
-			'slideCSSStretch' => $block->dataValue('SlideCSSStretch'),
+			'thumbnailType' => $thumbnailType,
             'showTitleOption' => $showTitleOption,
 			'showCaption' => $block->dataValue('showCaption'),
 			'floatCaption' => $block->dataValue('floatCaption'),
 			'slideCSSTextAlign' => $block->dataValue('slideCSSTextAlign'),
+			'slideCSSStretch' => $block->dataValue('SlideCSSStretch'),
+            'autoSlideDuration' => $block->dataValue('autoSlideDuration'),
+			'loop' => $block->dataValue('loop'),
+            'fade' => $block->dataValue('fade'),
 		]);
 	}
 }
