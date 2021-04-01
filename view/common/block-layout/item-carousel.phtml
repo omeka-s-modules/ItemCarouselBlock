@@ -121,7 +121,7 @@
 		$('.slick-slide').each(function(){
 			// Match caption div width to each image 
 			var imgWidth = $(this).children('img').width();
-			$(this).children('div').css('width', imgWidth);
+			$('.slick-slide .slide-text').css('width', imgWidth);
 		});
 	});
 	</script>

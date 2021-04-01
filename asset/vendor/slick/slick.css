@@ -99,7 +99,9 @@
 .slick-slide .slide-text {
     margin: 0;
     display: block;
-    padding: 2px;
+    max-width: 100%;
+    max-height: 100%;
+    padding: 0 10px;
 }
 .slick-slide .slide-text .title {
     font-weight: bold;
@@ -133,6 +135,7 @@
   display: flex;
   height: auto;
   justify-content: center;
+  word-wrap: break-word;
 }
 .slick-arrow.slick-hidden {
     display: none;
