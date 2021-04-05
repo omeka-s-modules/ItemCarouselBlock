@@ -34,7 +34,7 @@
 			}
 			
 			if ($media) {
-				$slide = '<img src="' . $media->thumbnailUrl($this->thumbnailType) . '">' . $textDiv;
+				$slide = $this->thumbnail($item, $this->thumbnailType) . $textDiv;
 				echo $item->linkRaw($slide);
 			} else {
 				$slide = $textDiv;
