@@ -118,11 +118,6 @@ $this->headScript()->appendFile($this->assetUrl('vendor/slick/slick.min.js', 'It
 				'align-items': 'center',
 			});
 		<?php endif; ?>
-		$('.slick-slide').each(function(){
-			// Match caption div width to each image 
-			var imgWidth = $(this).children('img').width();
-			$('.slick-slide .slide-text').css('width', imgWidth);
-		});
 	});
 	</script>
 </div>
