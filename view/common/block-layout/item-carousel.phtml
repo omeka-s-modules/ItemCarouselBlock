@@ -34,7 +34,7 @@ $this->headScript()->appendFile($this->assetUrl('vendor/slick/slick.min.js', 'It
 			}
 			
 			if ($media) {
-				$slide = $this->thumbnail($item, $this->thumbnailType) . $textDiv;
+				$slide = $this->thumbnail($media, $this->thumbnailType) . $textDiv;
 				echo $item->linkRaw($slide);
 			} else {
 				$slide = $textDiv;
