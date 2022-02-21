@@ -1,0 +1,113 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+# Translators:
+# Pols12 <poltron54@gmail.com>, 2021
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-07-13 10:28-0700\n"
+"PO-Revision-Date: 2021-07-13 17:32+0000\n"
+"Last-Translator: Pols12 <poltron54@gmail.com>, 2021\n"
+"Language-Team: French (https://www.transifex.com/omeka/teams/14184/fr/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: fr\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+#: src/Site/BlockLayout/Carousel.php:171
+msgid "Advanced Options"
+msgstr "Options avancées"
+
+#: src/Site/BlockLayout/Carousel.php:18
+msgid "Item Carousel"
+msgstr "Manège à contenus"
+
+#: src/Site/BlockLayout/Carousel.php:45
+msgid "Carousel title"
+msgstr "Titre du manège"
+
+#: src/Site/BlockLayout/Carousel.php:53
+msgid "Items per page"
+msgstr "Contenus par page"
+
+#: src/Site/BlockLayout/Carousel.php:54
+msgid "The number of item slides shown per page"
+msgstr "Le nombre de diapositives de contenu affichées par page."
+
+#: src/Site/BlockLayout/Carousel.php:66
+msgid "Show attachment caption"
+msgstr "Afficher la légende de la pièce jointe"
+
+#: src/Site/BlockLayout/Carousel.php:76
+msgid "Overlay title/caption"
+msgstr "Superposer le titre, la légende"
+
+#: src/Site/BlockLayout/Carousel.php:77
+msgid ""
+"Place title/caption over image (may require adjusting theme CSS text "
+"settings)"
+msgstr ""
+"Placer le titre, la légende par dessus l’image (peut nécessiter d’ajuster "
+"les paramètres du texte dans le CSS du thème)."
+
+#: src/Site/BlockLayout/Carousel.php:87
+msgid "Text align"
+msgstr "Alignement du texte"
+
+#: src/Site/BlockLayout/Carousel.php:89
+msgid "Left"
+msgstr "Gauche"
+
+#: src/Site/BlockLayout/Carousel.php:90
+msgid "Center"
+msgstr "Centré"
+
+#: src/Site/BlockLayout/Carousel.php:91
+msgid "Right"
+msgstr "Droite"
+
+#: src/Site/BlockLayout/Carousel.php:100
+msgid "Stretch Image"
+msgstr "Étirer l’image"
+
+#: src/Site/BlockLayout/Carousel.php:103
+msgid "Fill width"
+msgstr "Remplir la largeur"
+
+#: src/Site/BlockLayout/Carousel.php:104
+msgid "Fill height"
+msgstr "Remplir la hauteur"
+
+#: src/Site/BlockLayout/Carousel.php:105
+msgid "Fill entire slide"
+msgstr "Remplir la diapositive entière"
+
+#: src/Site/BlockLayout/Carousel.php:114
+msgid "Auto slide duration"
+msgstr "Durée de la diapositive automatique"
+
+#: src/Site/BlockLayout/Carousel.php:115
+msgid ""
+"Time in milliseconds to pause before auto advance (set to 0 to turn off)"
+msgstr ""
+"Temps de pause en millisecondes avant de passer à la diapositive suivante "
+"automatiquement (définir à 0 pour désactiver)."
+
+#: src/Site/BlockLayout/Carousel.php:123
+msgid "Infinite loop"
+msgstr "Boucle infinie"
+
+#: src/Site/BlockLayout/Carousel.php:142
+msgid "Fade between slides"
+msgstr "Fondu entre les diapositives"
+
+#: src/Site/BlockLayout/Carousel.php:143
+msgid "Note: only works with 1 item per page"
+msgstr "Remarque : ne fonctionne qu’avec un contenu par page"

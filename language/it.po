@@ -1,0 +1,113 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+# Translators:
+# Giorgio Comai <g@giorgiocomai.eu>, 2021
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-07-13 10:28-0700\n"
+"PO-Revision-Date: 2021-07-13 17:32+0000\n"
+"Last-Translator: Giorgio Comai <g@giorgiocomai.eu>, 2021\n"
+"Language-Team: Italian (https://www.transifex.com/omeka/teams/14184/it/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: it\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: src/Site/BlockLayout/Carousel.php:171
+msgid "Advanced Options"
+msgstr "Opzioni avanzate"
+
+#: src/Site/BlockLayout/Carousel.php:18
+msgid "Item Carousel"
+msgstr "Contenuto carousel"
+
+#: src/Site/BlockLayout/Carousel.php:45
+msgid "Carousel title"
+msgstr "Titolo del carousel"
+
+#: src/Site/BlockLayout/Carousel.php:53
+msgid "Items per page"
+msgstr "Contenuti per pagina"
+
+#: src/Site/BlockLayout/Carousel.php:54
+msgid "The number of item slides shown per page"
+msgstr "Il numero di schede contenuto mostrate per pagine"
+
+#: src/Site/BlockLayout/Carousel.php:66
+msgid "Show attachment caption"
+msgstr "Mostra la didascalia dell'allegato"
+
+#: src/Site/BlockLayout/Carousel.php:76
+msgid "Overlay title/caption"
+msgstr "Sovrapponi titolo/didascalia"
+
+#: src/Site/BlockLayout/Carousel.php:77
+msgid ""
+"Place title/caption over image (may require adjusting theme CSS text "
+"settings)"
+msgstr ""
+"Disponi titolo/didascalia sopra l'immagine (potrebbe esseci bisogno di "
+"adeguare le impostazioni CSS del tema)"
+
+#: src/Site/BlockLayout/Carousel.php:87
+msgid "Text align"
+msgstr "Allinea il testo"
+
+#: src/Site/BlockLayout/Carousel.php:89
+msgid "Left"
+msgstr "Sinistra"
+
+#: src/Site/BlockLayout/Carousel.php:90
+msgid "Center"
+msgstr "Centro"
+
+#: src/Site/BlockLayout/Carousel.php:91
+msgid "Right"
+msgstr "Destra"
+
+#: src/Site/BlockLayout/Carousel.php:100
+msgid "Stretch Image"
+msgstr "Allarga l'immagine"
+
+#: src/Site/BlockLayout/Carousel.php:103
+msgid "Fill width"
+msgstr "Adatta alla larghezza"
+
+#: src/Site/BlockLayout/Carousel.php:104
+msgid "Fill height"
+msgstr "Adatta all'altezza"
+
+#: src/Site/BlockLayout/Carousel.php:105
+msgid "Fill entire slide"
+msgstr "Adatta all'intera scheda"
+
+#: src/Site/BlockLayout/Carousel.php:114
+msgid "Auto slide duration"
+msgstr "Durata automatica di rotazione"
+
+#: src/Site/BlockLayout/Carousel.php:115
+msgid ""
+"Time in milliseconds to pause before auto advance (set to 0 to turn off)"
+msgstr ""
+"Tempo di attesa in millisecondi prima di avanzare (imposta a 0 per "
+"disattivare)"
+
+#: src/Site/BlockLayout/Carousel.php:123
+msgid "Infinite loop"
+msgstr "Rotazione infinita"
+
+#: src/Site/BlockLayout/Carousel.php:142
+msgid "Fade between slides"
+msgstr "Sfuma tra le schede"
+
+#: src/Site/BlockLayout/Carousel.php:143
+msgid "Note: only works with 1 item per page"
+msgstr "Nota: funziona solo quando c'è un unico contenuto per pagina"

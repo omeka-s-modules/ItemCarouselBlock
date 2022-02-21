@@ -1,0 +1,114 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+# Translators:
+# Rivo Zängov <eraser@eraser.ee>, 2021
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-07-13 10:28-0700\n"
+"PO-Revision-Date: 2021-07-13 17:32+0000\n"
+"Last-Translator: Rivo Zängov <eraser@eraser.ee>, 2021\n"
+"Language-Team: Estonian (https://www.transifex.com/omeka/teams/14184/et/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: et\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: src/Site/BlockLayout/Carousel.php:171
+msgid "Advanced Options"
+msgstr "Lisavalikud"
+
+#: src/Site/BlockLayout/Carousel.php:18
+msgid "Item Carousel"
+msgstr "Ühikute karusell"
+
+#: src/Site/BlockLayout/Carousel.php:45
+msgid "Carousel title"
+msgstr "Karusselli pealkiri"
+
+#: src/Site/BlockLayout/Carousel.php:53
+msgid "Items per page"
+msgstr "Ühikuid lehe kohta"
+
+#: src/Site/BlockLayout/Carousel.php:54
+msgid "The number of item slides shown per page"
+msgstr "Ühiku slaidide arv leheküljel"
+
+#: src/Site/BlockLayout/Carousel.php:66
+msgid "Show attachment caption"
+msgstr "Näita manuse pealkirja"
+
+#: src/Site/BlockLayout/Carousel.php:76
+msgid "Overlay title/caption"
+msgstr "Pealkiri"
+
+#: src/Site/BlockLayout/Carousel.php:77
+msgid ""
+"Place title/caption over image (may require adjusting theme CSS text "
+"settings)"
+msgstr ""
+"Paiguta pildi peale pealkiri (võimalik, et teema CSS teksti seadeid on vaja "
+"kohendada)"
+
+#: src/Site/BlockLayout/Carousel.php:87
+msgid "Text align"
+msgstr "Teksti joondus"
+
+#: src/Site/BlockLayout/Carousel.php:89
+msgid "Left"
+msgstr "Vasakule"
+
+#: src/Site/BlockLayout/Carousel.php:90
+msgid "Center"
+msgstr "Keskele"
+
+#: src/Site/BlockLayout/Carousel.php:91
+msgid "Right"
+msgstr "Paremale"
+
+#: src/Site/BlockLayout/Carousel.php:100
+msgid "Stretch Image"
+msgstr "Venita pilti"
+
+#: src/Site/BlockLayout/Carousel.php:103
+msgid "Fill width"
+msgstr "Täida laius"
+
+#: src/Site/BlockLayout/Carousel.php:104
+msgid "Fill height"
+msgstr "Täida kõrgus"
+
+#: src/Site/BlockLayout/Carousel.php:105
+msgid "Fill entire slide"
+msgstr "Täida kogu slaid"
+
+#: src/Site/BlockLayout/Carousel.php:114
+msgid "Auto slide duration"
+msgstr "Automaatne slaidi kestvus"
+
+#: src/Site/BlockLayout/Carousel.php:115
+msgid ""
+"Time in milliseconds to pause before auto advance (set to 0 to turn off)"
+msgstr ""
+"Aeg millisekundites, kui pika paus peetakse enne, kui slaider automaatselt "
+"edasi liigub (välja lülitamiseks sisesta 0)"
+
+#: src/Site/BlockLayout/Carousel.php:123
+msgid "Infinite loop"
+msgstr "Lõputu kordamine"
+
+#: src/Site/BlockLayout/Carousel.php:142
+msgid "Fade between slides"
+msgstr "Sujuv üleminek slaidide vahel"
+
+#: src/Site/BlockLayout/Carousel.php:143
+msgid "Note: only works with 1 item per page"
+msgstr ""
+"Märkus: Töötab ainult siis, kui lehekülje kohta näidatakse ühte ühikut"
