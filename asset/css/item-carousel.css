@@ -3,3 +3,7 @@
     padding-bottom: 25px;
     margin: 1rem 0;
 }
+
+.slick-slide:focus {
+    outline: 1px dotted;
+}
