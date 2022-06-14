@@ -50,8 +50,8 @@ class Carousel extends AbstractBlockLayout
 			'name' => 'o:block[__blockIndex__][o:data][perPage]',
 			'type' => Element\Number::class,
 			'options' => [
-				'label' => 'Items per page', // @translate
-				'info' => 'The number of item slides shown per page' // @translate
+				'label' => 'Items per slide', // @translate
+				'info' => 'The number of items shown per carousel slide' // @translate
 			],
 			'attributes' => [
 				'min' => 1,
@@ -140,7 +140,7 @@ class Carousel extends AbstractBlockLayout
 			'type' => Element\Checkbox::class,
             'options' => [
 				'label' => 'Fade between slides', // @translate
-                'info' => 'Note: only works with 1 item per page', // @translate
+                'info' => 'Note: only works with 1 item per slide', // @translate
                 'checked_value' => 'true',
                 'unchecked_value' => 'false',
 			],
