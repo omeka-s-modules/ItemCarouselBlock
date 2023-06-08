@@ -1,8 +1,8 @@
 <?php
-$this->headLink()->appendStylesheet($this->assetUrl('vendor/slick/slick.css', 'ItemCarouselBlock'));
-$this->headLink()->appendStylesheet($this->assetUrl('vendor/slick/slick-theme.css', 'ItemCarouselBlock'));
+$this->headLink()->appendStylesheet('//cdn.jsdelivr.net/npm/@accessible360/accessible-slick@1.0.1/slick/slick.min.css');
+$this->headLink()->appendStylesheet('//cdn.jsdelivr.net/npm/@accessible360/accessible-slick@1.0.1/slick/slick-theme.min.css');
 $this->headLink()->appendStylesheet($this->assetUrl('css/item-carousel.css', 'ItemCarouselBlock'));
-$this->headScript()->appendFile($this->assetUrl('vendor/slick/slick.min.js', 'ItemCarouselBlock'));
+$this->headScript()->appendFile('//cdn.jsdelivr.net/npm/@accessible360/accessible-slick@1.0.1/slick/slick.min.js');
 ?>
 <div class="carousel-block">
 	<?php if ($this->carouselHeading): ?>
@@ -74,7 +74,10 @@ $this->headScript()->appendFile($this->assetUrl('vendor/slick/slick.min.js', 'It
 			});
 		<?php endif; ?>
 		<?php if ($this->slideCSSStretch == 'width'): ?>
-			$('.slick-slide > img').css({
+			$('.slick-slide > div').css({
+				'width': '100%',
+			});
+			$('.slick-slide img').css({
 				'width': '100%',
 				'object-fit': 'cover',
 			});
@@ -83,7 +86,10 @@ $this->headScript()->appendFile($this->assetUrl('vendor/slick/slick.min.js', 'It
 			});
 		<?php endif; ?>
 		<?php if ($this->slideCSSStretch == 'height'): ?>
-			$('.slick-slide > img').css({
+			$('.slick-slide > div').css({
+				'height': '100%',
+			});
+			$('.slick-slide img').css({
 				'height': '100%',
 				'object-fit': 'cover',
 			});
@@ -92,7 +98,11 @@ $this->headScript()->appendFile($this->assetUrl('vendor/slick/slick.min.js', 'It
 			});
 		<?php endif; ?>
 		<?php if ($this->slideCSSStretch == 'entire'): ?>
-			$('.slick-slide > img').css({
+			$('.slick-slide > div').css({
+				'width': '100%',
+				'height': '100%',
+			});
+			$('.slick-slide img').css({
 				'width': '100%',
 				'height': '100%',
 				'object-fit': 'cover',
@@ -103,15 +113,13 @@ $this->headScript()->appendFile($this->assetUrl('vendor/slick/slick.min.js', 'It
 		<?php endif; ?>
 		<?php if ($this->floatCaption == 'true'): ?>
 			$('.slick-slide > div').css({
+				'position': 'relative',
+			});
+			$('.slick-slide .slide-text').css({
 				'position': 'absolute',
-				'margin': '',
+				'top': '50%',
+				'width': '100%',
 			});			
-			$('.slick-slide > img').css({
-				'margin': '',
-			});
-			$('.slick-track .slick-slide').css({
-				'display': 'flex',
-			});
 		<?php endif; ?>
 		<?php if ($this->thumbnailType != 'large'): ?>
 			$('.slick-track .slick-slide').css({

@@ -27,7 +27,7 @@ class Carousel extends AbstractBlockLayout
 			'showCaption' => 'false',
 			'floatCaption' => 'false',
 			'slideCSSTextAlign' => 'center',
-			'SlideCSSStretch' => 'none',
+			'slideCSSStretch' => 'none',
             'autoSlideDuration' => 0,
 			'loop' => 'true',
             'fade' => 'false',
@@ -94,7 +94,7 @@ class Carousel extends AbstractBlockLayout
 		]);
 
 		$advancedForm->add([
-			'name' => 'o:block[__blockIndex__][o:data][SlideCSSStretch]',
+			'name' => 'o:block[__blockIndex__][o:data][slideCSSStretch]',
 			'type' => Element\Select::class,
             'options' => [
 				'label' => 'Stretch Image', // @translate
@@ -157,7 +157,7 @@ class Carousel extends AbstractBlockLayout
 			'o:block[__blockIndex__][o:data][showCaption]' => $data['showCaption'],
 			'o:block[__blockIndex__][o:data][floatCaption]' => $data['floatCaption'],
 			'o:block[__blockIndex__][o:data][slideCSSTextAlign]' => $data['slideCSSTextAlign'],
-			'o:block[__blockIndex__][o:data][SlideCSSStretch]' => $data['SlideCSSStretch'],
+			'o:block[__blockIndex__][o:data][slideCSSStretch]' => $data['slideCSSStretch'],
 			'o:block[__blockIndex__][o:data][autoSlideDuration]' => $data['autoSlideDuration'],
 			'o:block[__blockIndex__][o:data][loop]' => $data['loop'],
 			'o:block[__blockIndex__][o:data][fade]' => $fade,
@@ -197,7 +197,7 @@ class Carousel extends AbstractBlockLayout
 			'showCaption' => $block->dataValue('showCaption'),
 			'floatCaption' => $block->dataValue('floatCaption'),
 			'slideCSSTextAlign' => $block->dataValue('slideCSSTextAlign'),
-			'slideCSSStretch' => $block->dataValue('SlideCSSStretch'),
+			'slideCSSStretch' => $block->dataValue('slideCSSStretch'),
             'autoSlideDuration' => $block->dataValue('autoSlideDuration'),
 			'loop' => $block->dataValue('loop'),
             'fade' => $block->dataValue('fade'),
