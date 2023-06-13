@@ -189,7 +189,8 @@ class Carousel extends AbstractBlockLayout
         $showTitleOption = $block->dataValue('show_title_option', 'item_title');
 		
         return $view->partial('common/block-layout/item-carousel', [
-            'attachments' => $attachments,
+            'blockID' => $block->id(),
+			'attachments' => $attachments,
 			'carouselHeading' => $block->dataValue('carouselHeading'),
 			'perPage' => $block->dataValue('perPage'),
 			'thumbnailType' => $thumbnailType,
