@@ -4,7 +4,7 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
-# Khaidav T. <khaidaw@yahoo.com>, 2021
+# Iametza Interaktiboa, 2022
 # 
 #, fuzzy
 msgid ""
@@ -13,97 +13,101 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-07-13 10:28-0700\n"
 "PO-Revision-Date: 2021-07-13 17:32+0000\n"
-"Last-Translator: Khaidav T. <khaidaw@yahoo.com>, 2021\n"
-"Language-Team: Mongolian (https://app.transifex.com/omeka/teams/14184/mn/)\n"
+"Last-Translator: Iametza Interaktiboa, 2022\n"
+"Language-Team: Basque (https://app.transifex.com/omeka/teams/14184/eu/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: mn\n"
+"Language: eu\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: src/Site/BlockLayout/Carousel.php:171
 msgid "Advanced Options"
-msgstr ""
+msgstr "Aukera Aurreratuak"
 
 #: src/Site/BlockLayout/Carousel.php:18
 msgid "Item Carousel"
-msgstr ""
+msgstr "Elementuen Karrusela"
 
 #: src/Site/BlockLayout/Carousel.php:45
 msgid "Carousel title"
-msgstr ""
+msgstr "Karrusel izenburua"
 
 #: src/Site/BlockLayout/Carousel.php:53
 msgid "Items per page"
-msgstr ""
+msgstr "Elementuak orriko"
 
 #: src/Site/BlockLayout/Carousel.php:54
 msgid "The number of item slides shown per page"
-msgstr ""
+msgstr "Orrialde bakoitzeko erakutsi beharreko elementu diapositiba kopurua"
 
 #: src/Site/BlockLayout/Carousel.php:66
 msgid "Show attachment caption"
-msgstr ""
+msgstr "Erakutsi atxikiaren epigrafrea"
 
 #: src/Site/BlockLayout/Carousel.php:76
 msgid "Overlay title/caption"
-msgstr ""
+msgstr "Gainjarri titulua/epigrafrea"
 
 #: src/Site/BlockLayout/Carousel.php:77
 msgid ""
 "Place title/caption over image (may require adjusting theme CSS text "
 "settings)"
 msgstr ""
+"Ipini titulu/epigrafea irudi gainean (gaiaren CSS ezarpenak doitzea ekar "
+"dezake)"
 
 #: src/Site/BlockLayout/Carousel.php:87
 msgid "Text align"
-msgstr "Текстийн зэрэгцүүлэлт"
+msgstr "Testu lerrokatzea"
 
 #: src/Site/BlockLayout/Carousel.php:89
 msgid "Left"
-msgstr "Зүүн"
+msgstr "Ezkerra"
 
 #: src/Site/BlockLayout/Carousel.php:90
 msgid "Center"
-msgstr "Төв"
+msgstr "Erdia"
 
 #: src/Site/BlockLayout/Carousel.php:91
 msgid "Right"
-msgstr "Баруун"
+msgstr "Eskubia"
 
 #: src/Site/BlockLayout/Carousel.php:100
 msgid "Stretch Image"
-msgstr ""
+msgstr "Luzatu Irudia"
 
 #: src/Site/BlockLayout/Carousel.php:103
 msgid "Fill width"
-msgstr "Бүтэн өргөн"
+msgstr "Bete zabalera"
 
 #: src/Site/BlockLayout/Carousel.php:104
 msgid "Fill height"
-msgstr "Бүтэн өндөр"
+msgstr "Bete altuera"
 
 #: src/Site/BlockLayout/Carousel.php:105
 msgid "Fill entire slide"
-msgstr ""
+msgstr "Bete diapositiba osoa"
 
 #: src/Site/BlockLayout/Carousel.php:114
 msgid "Auto slide duration"
-msgstr ""
+msgstr "Automatikoki irristatze iraupena"
 
 #: src/Site/BlockLayout/Carousel.php:115
 msgid ""
 "Time in milliseconds to pause before auto advance (set to 0 to turn off)"
 msgstr ""
+"Geldirik egoteko denbora milisegundutan berriro automatikoki aurrera egin "
+"aurretik (ezarri 0ra desgaitzeko)"
 
 #: src/Site/BlockLayout/Carousel.php:123
 msgid "Infinite loop"
-msgstr ""
+msgstr "Begizta infinitua"
 
 #: src/Site/BlockLayout/Carousel.php:142
 msgid "Fade between slides"
-msgstr ""
+msgstr "Koloregabetu diapositiben artean"
 
 #: src/Site/BlockLayout/Carousel.php:143
 msgid "Note: only works with 1 item per page"
-msgstr ""
+msgstr "Oharra: orriko elementu bakarrarekin funtzionatzen du"
