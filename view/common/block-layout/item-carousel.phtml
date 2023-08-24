@@ -13,6 +13,10 @@ $carouselID = 'carousel-' . $blockID;
 	<?php
 		foreach ($attachments as $attachment) {
 			$item = $attachment->item();
+			// Skip if item doesn't exist
+			if (!$item) {
+				continue;
+			}
 			$media = $attachment->media() ?: $item->primaryMedia();
 			$caption = $this->showCaption == 'true' ? $attachment->caption() : '';
 			$title = '';
