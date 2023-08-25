@@ -40,10 +40,10 @@ $carouselID = 'carousel-' . $blockID;
 			
 			if ($media) {
 				$slide = $this->thumbnail($media, $this->thumbnailType) . $textDiv;
-				echo $item->linkRaw($slide);
+				echo '<div>' . $item->linkRaw($slide) . '</div>';
 			} else {
 				$slide = $textDiv;
-				echo $item->linkRaw($slide);
+				echo '<div>' . $item->linkRaw($slide) . '</div>';
 			} 
 		}
 	?>
