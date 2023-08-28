@@ -4,6 +4,9 @@ $this->headLink()->appendStylesheet('//cdn.jsdelivr.net/npm/@accessible360/acces
 $this->headLink()->appendStylesheet($this->assetUrl('css/item-carousel.css', 'ItemCarouselBlock'));
 $this->headScript()->appendFile('//cdn.jsdelivr.net/npm/@accessible360/accessible-slick@1.0.1/slick/slick.min.js');
 $carouselID = 'carousel-' . $blockID;
+$filterLocale = (bool) $this->siteSetting('filter_locale_values');
+$lang = $this->lang();
+$valueLang = $filterLocale ? [$lang, ''] : null;
 ?>
 <div class="carousel-block">
 	<?php if ($this->carouselHeading): ?>
@@ -22,9 +25,9 @@ $carouselID = 'carousel-' . $blockID;
 			$title = '';
 						
 			if ($this->showTitleOption == 'item_title') {
-				$title = $item->displayTitle();
+				$title = $item->displayTitle(null, $valueLang);
 			} elseif ($this->showTitleOption == 'file_name') {			
-				$title = $media ? $media->displayTitle() : $item->displayTitle();
+				$title = $media ? $media->displayTitle(null, $valueLang) : $item->displayTitle(null, $valueLang);
 			}
 			
 			if ($this->showTitleOption == 'no_title' && $this->showCaption == 'false') {
