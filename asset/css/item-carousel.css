@@ -4,8 +4,25 @@
     margin: 1rem 0;
 }
 
+.slick-slider {
+    padding: 0 2rem;
+}
+
+.slick-prev {
+    left: .5rem;
+}
+
+.slick-next {
+    right: .5rem;
+}
+
 .slick-track {
     display: flex;
+}
+
+.slick-dots {
+    left: 0;
+    right: 0;
 }
 
 .slick-slide {
