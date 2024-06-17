@@ -17,7 +17,7 @@ class Module extends AbstractModule
         // Copy ItemCarouselBlock-related data for the CopyResources module.
         $sharedEventManager->attach(
             '*',
-            'copy_resources.copy_site',
+            'copy_resources.sites.post',
             function (Event $event) {
                 $copyResources = $event->getParam('copy_resources');
                 $siteCopy = $event->getParam('resource_copy');
