@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-07-13 10:28-0700\n"
+"POT-Creation-Date: 2024-06-20 14:37-0400\n"
 "PO-Revision-Date: 2021-07-13 17:32+0000\n"
 "Last-Translator: Rivo Zängov <eraser@eraser.ee>, 2021\n"
 "Language-Team: Estonian (https://app.transifex.com/omeka/teams/14184/et/)\n"
@@ -34,12 +34,12 @@ msgid "Carousel title"
 msgstr "Karusselli pealkiri"
 
 #: src/Site/BlockLayout/Carousel.php:53
-msgid "Items per page"
-msgstr "Ühikuid lehe kohta"
+msgid "Items per slide"
+msgstr ""
 
 #: src/Site/BlockLayout/Carousel.php:54
-msgid "The number of item slides shown per page"
-msgstr "Ühiku slaidide arv leheküljel"
+msgid "The number of items shown per carousel slide"
+msgstr ""
 
 #: src/Site/BlockLayout/Carousel.php:66
 msgid "Show attachment caption"
@@ -60,18 +60,6 @@ msgstr ""
 #: src/Site/BlockLayout/Carousel.php:87
 msgid "Text align"
 msgstr "Teksti joondus"
-
-#: src/Site/BlockLayout/Carousel.php:89
-msgid "Left"
-msgstr "Vasakule"
-
-#: src/Site/BlockLayout/Carousel.php:90
-msgid "Center"
-msgstr "Keskele"
-
-#: src/Site/BlockLayout/Carousel.php:91
-msgid "Right"
-msgstr "Paremale"
 
 #: src/Site/BlockLayout/Carousel.php:100
 msgid "Stretch Image"
@@ -109,6 +97,5 @@ msgid "Fade between slides"
 msgstr "Sujuv üleminek slaidide vahel"
 
 #: src/Site/BlockLayout/Carousel.php:143
-msgid "Note: only works with 1 item per page"
+msgid "Note: only works with 1 item per slide"
 msgstr ""
-"Märkus: Töötab ainult siis, kui lehekülje kohta näidatakse ühte ühikut"

@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-07-13 10:28-0700\n"
+"POT-Creation-Date: 2024-06-20 14:37-0400\n"
 "PO-Revision-Date: 2021-07-13 17:32+0000\n"
 "Last-Translator: Giorgio Comai <g@giorgiocomai.eu>, 2021\n"
 "Language-Team: Italian (https://app.transifex.com/omeka/teams/14184/it/)\n"
@@ -34,12 +34,12 @@ msgid "Carousel title"
 msgstr "Titolo del carousel"
 
 #: src/Site/BlockLayout/Carousel.php:53
-msgid "Items per page"
-msgstr "Contenuti per pagina"
+msgid "Items per slide"
+msgstr ""
 
 #: src/Site/BlockLayout/Carousel.php:54
-msgid "The number of item slides shown per page"
-msgstr "Il numero di schede contenuto mostrate per pagine"
+msgid "The number of items shown per carousel slide"
+msgstr ""
 
 #: src/Site/BlockLayout/Carousel.php:66
 msgid "Show attachment caption"
@@ -60,18 +60,6 @@ msgstr ""
 #: src/Site/BlockLayout/Carousel.php:87
 msgid "Text align"
 msgstr "Allinea il testo"
-
-#: src/Site/BlockLayout/Carousel.php:89
-msgid "Left"
-msgstr "Sinistra"
-
-#: src/Site/BlockLayout/Carousel.php:90
-msgid "Center"
-msgstr "Centro"
-
-#: src/Site/BlockLayout/Carousel.php:91
-msgid "Right"
-msgstr "Destra"
 
 #: src/Site/BlockLayout/Carousel.php:100
 msgid "Stretch Image"
@@ -109,5 +97,5 @@ msgid "Fade between slides"
 msgstr "Sfuma tra le schede"
 
 #: src/Site/BlockLayout/Carousel.php:143
-msgid "Note: only works with 1 item per page"
-msgstr "Nota: funziona solo quando c'è un unico contenuto per pagina"
+msgid "Note: only works with 1 item per slide"
+msgstr ""

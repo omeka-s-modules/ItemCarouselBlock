@@ -4,7 +4,7 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
-# Rubén Alcaraz Martínez <rubenalcarazmartinez@gmail.com>, 2023
+# Deidson Rafael Trindade <drafael@usp.br>, 2024
 # 
 #, fuzzy
 msgid ""
@@ -13,25 +13,25 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-06-20 14:37-0400\n"
 "PO-Revision-Date: 2021-07-13 17:32+0000\n"
-"Last-Translator: Rubén Alcaraz Martínez <rubenalcarazmartinez@gmail.com>, 2023\n"
-"Language-Team: Catalan (Spain) (https://app.transifex.com/omeka/teams/14184/ca_ES/)\n"
+"Last-Translator: Deidson Rafael Trindade <drafael@usp.br>, 2024\n"
+"Language-Team: Portuguese (Brazil) (https://app.transifex.com/omeka/teams/14184/pt_BR/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: ca_ES\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Language: pt_BR\n"
+"Plural-Forms: nplurals=3; plural=(n == 0 || n == 1) ? 0 : n != 0 && n % 1000000 == 0 ? 1 : 2;\n"
 
 #: src/Site/BlockLayout/Carousel.php:171
 msgid "Advanced Options"
-msgstr "Opcions avançades"
+msgstr "Opções avançadas"
 
 #: src/Site/BlockLayout/Carousel.php:18
 msgid "Item Carousel"
-msgstr "Carrusel d'elements"
+msgstr "Carrossel de item"
 
 #: src/Site/BlockLayout/Carousel.php:45
 msgid "Carousel title"
-msgstr "Títol"
+msgstr "Título do carrossel"
 
 #: src/Site/BlockLayout/Carousel.php:53
 msgid "Items per slide"
@@ -43,57 +43,58 @@ msgstr ""
 
 #: src/Site/BlockLayout/Carousel.php:66
 msgid "Show attachment caption"
-msgstr "Mostra el peu d'imatge dels fitxers"
+msgstr "Mostrar legenda do anexo"
 
 #: src/Site/BlockLayout/Carousel.php:76
 msgid "Overlay title/caption"
-msgstr "Superposa el títol / encapçalament"
+msgstr "Sobreposição de título/legenda"
 
 #: src/Site/BlockLayout/Carousel.php:77
 msgid ""
 "Place title/caption over image (may require adjusting theme CSS text "
 "settings)"
 msgstr ""
-"Ubica el títol / peu sobre la imatge (requereix ajustar el CSS del tema)"
+"Coloque o título/legenda sobre a imagem (pode ser necessário ajustar as "
+"configurações de texto CSS do tema)"
 
 #: src/Site/BlockLayout/Carousel.php:87
 msgid "Text align"
-msgstr "Alineació del text"
+msgstr "Alinhamento de texto"
 
 #: src/Site/BlockLayout/Carousel.php:100
 msgid "Stretch Image"
-msgstr "Estira la imatge"
+msgstr "Imagem esticada"
 
 #: src/Site/BlockLayout/Carousel.php:103
 msgid "Fill width"
-msgstr "Ample complet"
+msgstr "Largura de preenchimento"
 
 #: src/Site/BlockLayout/Carousel.php:104
 msgid "Fill height"
-msgstr "Alçada completa"
+msgstr "Altura de preenchimento"
 
 #: src/Site/BlockLayout/Carousel.php:105
 msgid "Fill entire slide"
-msgstr "Omple tota la diapositiva"
+msgstr "Preencher o slide inteiro"
 
 #: src/Site/BlockLayout/Carousel.php:114
 msgid "Auto slide duration"
-msgstr "Durada automàtica"
+msgstr "Duração do slide automático"
 
 #: src/Site/BlockLayout/Carousel.php:115
 msgid ""
 "Time in milliseconds to pause before auto advance (set to 0 to turn off)"
 msgstr ""
-"El temps en mil·lisegons fins a la pausa abans d'avançar automàticament (si "
-"es configura com a 0 es deshabilita)"
+"Tempo em milissegundos para pausar antes do avanço automático (defina como 0"
+" para desligar)"
 
 #: src/Site/BlockLayout/Carousel.php:123
 msgid "Infinite loop"
-msgstr "Bucle infinit"
+msgstr "Loop infinito"
 
 #: src/Site/BlockLayout/Carousel.php:142
 msgid "Fade between slides"
-msgstr "Esvaeix entre diapositives"
+msgstr "Desvanecer entre slides"
 
 #: src/Site/BlockLayout/Carousel.php:143
 msgid "Note: only works with 1 item per slide"
