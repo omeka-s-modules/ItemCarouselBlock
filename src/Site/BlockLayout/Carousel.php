@@ -26,6 +26,7 @@ class Carousel extends AbstractBlockLayout
             'floatCaption' => 'false',
             'slideCSSTextAlign' => 'center',
             'slideCSSStretch' => 'none',
+            'breakPoint' => 1080,
             'autoSlideDuration' => 0,
             'loop' => 'true',
             'fade' => 'false',
@@ -106,6 +107,15 @@ class Carousel extends AbstractBlockLayout
         ]);
 
         $advancedForm->add([
+            'name' => 'o:block[__blockIndex__][o:data][breakPoint]',
+            'type' => Element\Text::class,
+            'options' => [
+                'label' => 'Breakpoint', // @translate
+                'info' => 'Display one item per slide when carousel width drops below given pixel width. Adjust for mobile display, carousels with many items per page, etc.', // @translate
+            ],
+        ]);
+
+        $advancedForm->add([
             'name' => 'o:block[__blockIndex__][o:data][autoSlideDuration]',
             'type' => Element\Text::class,
             'options' => [
@@ -156,6 +166,7 @@ class Carousel extends AbstractBlockLayout
             'o:block[__blockIndex__][o:data][floatCaption]' => $data['floatCaption'],
             'o:block[__blockIndex__][o:data][slideCSSTextAlign]' => $data['slideCSSTextAlign'],
             'o:block[__blockIndex__][o:data][slideCSSStretch]' => $data['slideCSSStretch'],
+            'o:block[__blockIndex__][o:data][breakPoint]' => $data['breakPoint'],
             'o:block[__blockIndex__][o:data][autoSlideDuration]' => $data['autoSlideDuration'],
             'o:block[__blockIndex__][o:data][loop]' => $data['loop'],
             'o:block[__blockIndex__][o:data][fade]' => $fade,
@@ -196,6 +207,7 @@ class Carousel extends AbstractBlockLayout
             'floatCaption' => $block->dataValue('floatCaption'),
             'slideCSSTextAlign' => $block->dataValue('slideCSSTextAlign'),
             'slideCSSStretch' => $block->dataValue('slideCSSStretch'),
+            'breakPoint' => $block->dataValue('breakPoint'),
             'autoSlideDuration' => $block->dataValue('autoSlideDuration'),
             'loop' => $block->dataValue('loop'),
             'fade' => $block->dataValue('fade'),

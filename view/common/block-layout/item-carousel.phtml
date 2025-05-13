@@ -72,6 +72,14 @@ $valueLang = $filterLocale ? [$lang, ''] : null;
 				arrows: true,
 				dots: true,
 				adaptiveHeight: true,
+				responsive: [
+					{
+						breakpoint: <?php echo $this->breakPoint ?>,
+						settings: {
+							slidesToShow: 1,
+						}
+					}
+				]
 			});
 		$('.<?php echo $carouselID; ?> .slick-slide').css({
 				'text-align': '<?php echo $this->slideCSSTextAlign ?>',
