@@ -26,6 +26,7 @@ class Carousel extends AbstractBlockLayout
             'floatCaption' => 'false',
             'slideCSSTextAlign' => 'center',
             'slideCSSStretch' => 'none',
+            'adaptiveHeight' => 'false',
             'breakPoint' => 1080,
             'autoSlideDuration' => 0,
             'loop' => 'true',
@@ -96,13 +97,23 @@ class Carousel extends AbstractBlockLayout
             'name' => 'o:block[__blockIndex__][o:data][slideCSSStretch]',
             'type' => Element\Select::class,
             'options' => [
-                'label' => 'Stretch Image', // @translate
+                'label' => 'Stretch image', // @translate
                 'value_options' => [
                     'none' => 'None', // @translate
                     'width' => 'Fill width', // @translate
                     'height' => 'Fill height', // @translate
                     'entire' => 'Fill entire slide', // @translate
                 ],
+            ],
+        ]);
+
+        $advancedForm->add([
+            'name' => 'o:block[__blockIndex__][o:data][adaptiveHeight]',
+            'type' => Element\Checkbox::class,
+            'options' => [
+                'label' => 'Adaptive height', // @translate
+                'checked_value' => 'true',
+                'unchecked_value' => 'false',
             ],
         ]);
 
@@ -166,6 +177,7 @@ class Carousel extends AbstractBlockLayout
             'o:block[__blockIndex__][o:data][floatCaption]' => $data['floatCaption'],
             'o:block[__blockIndex__][o:data][slideCSSTextAlign]' => $data['slideCSSTextAlign'],
             'o:block[__blockIndex__][o:data][slideCSSStretch]' => $data['slideCSSStretch'],
+            'o:block[__blockIndex__][o:data][adaptiveHeight]' => $data['adaptiveHeight'],
             'o:block[__blockIndex__][o:data][breakPoint]' => $data['breakPoint'],
             'o:block[__blockIndex__][o:data][autoSlideDuration]' => $data['autoSlideDuration'],
             'o:block[__blockIndex__][o:data][loop]' => $data['loop'],
@@ -207,6 +219,7 @@ class Carousel extends AbstractBlockLayout
             'floatCaption' => $block->dataValue('floatCaption'),
             'slideCSSTextAlign' => $block->dataValue('slideCSSTextAlign'),
             'slideCSSStretch' => $block->dataValue('slideCSSStretch'),
+            'adaptiveHeight' => $block->dataValue('adaptiveHeight'),
             'breakPoint' => $block->dataValue('breakPoint'),
             'autoSlideDuration' => $block->dataValue('autoSlideDuration'),
             'loop' => $block->dataValue('loop'),
