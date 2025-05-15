@@ -26,7 +26,7 @@ class Carousel extends AbstractBlockLayout
             'floatCaption' => 'false',
             'slideCSSTextAlign' => 'center',
             'slideCSSStretch' => 'none',
-            'breakPoint' => 800,
+            'breakPoint' => 820,
             'autoSlideDuration' => 0,
             'loop' => 'true',
             'fade' => 'false',
