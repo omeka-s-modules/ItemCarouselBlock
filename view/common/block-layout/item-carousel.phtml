@@ -68,6 +68,7 @@ $valueLang = $filterLocale ? [$lang, ''] : null;
 				autoplaySpeed: <?php echo $this->autoSlideDuration ?>,
 				<?php endif; ?>
 				pauseOnHover: true,
+				pauseOnFocus: false,
 				centerMode: false,
 				arrows: true,
 				dots: true,
@@ -79,6 +80,9 @@ $valueLang = $filterLocale ? [$lang, ''] : null;
 						}
 					}
 				]
+			});
+		$('.<?php echo $carouselID; ?>').on('touchstart', e => {
+				$('.<?php echo $carouselID; ?>').slick('slickPlay');
 			});
 		$('.<?php echo $carouselID; ?> .slick-slide').css({
 				'text-align': '<?php echo $this->slideCSSTextAlign ?>',
