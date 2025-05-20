@@ -88,5 +88,17 @@
 
 .slick-autoplay-toggle-button .slick-play-icon:before,
 .slick-autoplay-toggle-button .slick-pause-icon:before {
-    content: '\23EF',
+    font-family: "Font Awesome 5 Free";
+    font-size: 14px;
+    font-weight: 900;
+    color: black;
 }
+
+.slick-autoplay-toggle-button .slick-play-icon:before {
+    content: "\f04b";
+}
+
+.slick-autoplay-toggle-button .slick-pause-icon:before {
+    content: "\f04c";
+}
+
