@@ -1,3 +1,5 @@
+@charset "UTF-8";
+
 .carousel-block {
     position: relative;
     padding-bottom: 25px;
@@ -82,4 +84,9 @@
 .slick-prev .slick-next-icon:before,
 .slick-prev .slick-prev-icon:before {
     color: black;
+}
+
+.slick-autoplay-toggle-button .slick-play-icon:before,
+.slick-autoplay-toggle-button .slick-pause-icon:before {
+    content: '\23EF',
 }
