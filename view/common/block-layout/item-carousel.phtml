@@ -74,7 +74,7 @@ $valueLang = $filterLocale ? [$lang, ''] : null;
 				dots: true,
 				responsive: [
 					{
-						breakpoint: <?php echo $this->breakPoint ?>,
+						breakpoint: <?php echo !empty($this->breakPoint) ? $this->breakPoint : '820'?>,
 						settings: {
 							slidesToShow: 1,
 						}
