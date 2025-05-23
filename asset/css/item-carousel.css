@@ -30,7 +30,6 @@
 .slick-slide {
     display: flex;
     flex-flow: column;
-    align-items: center;
     position: relative;
 
     text-align: center;

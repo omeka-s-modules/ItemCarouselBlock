@@ -35,18 +35,18 @@ $valueLang = $filterLocale ? [$lang, ''] : null;
 			} elseif ($this->showTitleOption == 'no_title' && $this->showCaption == 'true') {			
 				$textDiv = sprintf('<div class="slide-text"><div class="caption">%s</div></div>', $caption);
 			} elseif ($this->showTitleOption != 'no_title' && $this->showCaption == 'false') {			
-				$textDiv = sprintf('<div class="slide-text"><div class="title">%s</div></div>', $title);
+				$textDiv = sprintf('<div class="slide-text"><div class="title">%s</div></div>', $item->linkRaw($title));
 			} else {
 				$textDiv = sprintf('<div class="slide-text"><div class="title">%s</div><div class="caption">%s</div></div>', 
-				$title, $caption);
+				$item->linkRaw($title), $caption);
 			}
 			
 			if ($media) {
-				$slide = $this->thumbnail($media, $this->thumbnailType) . $textDiv;
-				echo '<div>' . $item->linkRaw($slide) . '</div>';
+				// $slide = $item->linkRaw($this->thumbnail($media, $this->thumbnailType)) . $textDiv;
+				echo '<div>' . $item->linkRaw($this->thumbnail($media, $this->thumbnailType)) . $textDiv . '</div>';
 			} else {
-				$slide = $textDiv;
-				echo '<div>' . $item->linkRaw($slide) . '</div>';
+				// $slide = $textDiv;
+				echo '<div>' . $textDiv . '</div>';
 			} 
 		}
 	?>
