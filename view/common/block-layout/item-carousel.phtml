@@ -42,10 +42,8 @@ $valueLang = $filterLocale ? [$lang, ''] : null;
 			}
 			
 			if ($media) {
-				// $slide = $item->linkRaw($this->thumbnail($media, $this->thumbnailType)) . $textDiv;
 				echo '<div>' . $item->linkRaw($this->thumbnail($media, $this->thumbnailType)) . $textDiv . '</div>';
 			} else {
-				// $slide = $textDiv;
 				echo '<div>' . $textDiv . '</div>';
 			} 
 		}
@@ -82,7 +80,10 @@ $valueLang = $filterLocale ? [$lang, ''] : null;
 				]
 			});
 		$('.<?php echo $carouselID; ?>').on('touchstart', e => {
-				$('.<?php echo $carouselID; ?>').slick('slickPlay');
+				// Only 'restart' autoplay on mobile if it's selected in settings
+				<?php if ($this->autoSlideDuration > 0): ?>
+					$('.<?php echo $carouselID; ?>').slick('slickPlay');
+				<?php endif; ?>
 			});
 		$('.<?php echo $carouselID; ?> .slick-slide').css({
 				'text-align': '<?php echo $this->slideCSSTextAlign ?>',
