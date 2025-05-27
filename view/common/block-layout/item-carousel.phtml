@@ -70,14 +70,16 @@ $valueLang = $filterLocale ? [$lang, ''] : null;
 				centerMode: false,
 				arrows: true,
 				dots: true,
+				<?php if (!empty($this->breakPoint)): ?>
 				responsive: [
 					{
-						breakpoint: <?php echo !empty($this->breakPoint) ? $this->breakPoint : '820'?>,
+						breakpoint: <?php echo $this->breakPoint ?>,
 						settings: {
 							slidesToShow: 1,
 						}
 					}
 				]
+				<?php endif; ?>
 			});
 		$('.<?php echo $carouselID; ?>').on('touchstart', e => {
 				// Only 'restart' autoplay on mobile if it's selected in settings
