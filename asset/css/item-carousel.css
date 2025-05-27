@@ -91,6 +91,13 @@
     font-size: 14px;
     font-weight: 900;
     color: black;
-    content: "\f04b\f04c";
+}
+
+.slick-autoplay-toggle-button .slick-play-icon:before {
+    content: "\f04b";
+}
+
+.slick-autoplay-toggle-button .slick-pause-icon:before {
+    content: "\f04c";
 }
 
