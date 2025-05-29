@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-06-20 14:37-0400\n"
+"POT-Creation-Date: 2025-05-29 10:02-0700\n"
 "PO-Revision-Date: 2021-07-13 17:32+0000\n"
 "Last-Translator: Deidson Rafael Trindade <drafael@usp.br>, 2024\n"
 "Language-Team: Portuguese (Brazil) (https://app.transifex.com/omeka/teams/14184/pt_BR/)\n"
@@ -21,35 +21,35 @@ msgstr ""
 "Language: pt_BR\n"
 "Plural-Forms: nplurals=3; plural=(n == 0 || n == 1) ? 0 : n != 0 && n % 1000000 == 0 ? 1 : 2;\n"
 
-#: src/Site/BlockLayout/Carousel.php:171
+#: src/Site/BlockLayout/Carousel.php:180
 msgid "Advanced Options"
 msgstr "Opções avançadas"
 
-#: src/Site/BlockLayout/Carousel.php:18
+#: src/Site/BlockLayout/Carousel.php:16
 msgid "Item Carousel"
 msgstr "Carrossel de item"
 
-#: src/Site/BlockLayout/Carousel.php:45
+#: src/Site/BlockLayout/Carousel.php:44
 msgid "Carousel title"
 msgstr "Título do carrossel"
 
-#: src/Site/BlockLayout/Carousel.php:53
+#: src/Site/BlockLayout/Carousel.php:52
 msgid "Items per slide"
 msgstr ""
 
-#: src/Site/BlockLayout/Carousel.php:54
+#: src/Site/BlockLayout/Carousel.php:53
 msgid "The number of items shown per carousel slide"
 msgstr ""
 
-#: src/Site/BlockLayout/Carousel.php:66
+#: src/Site/BlockLayout/Carousel.php:65
 msgid "Show attachment caption"
 msgstr "Mostrar legenda do anexo"
 
-#: src/Site/BlockLayout/Carousel.php:76
+#: src/Site/BlockLayout/Carousel.php:75
 msgid "Overlay title/caption"
 msgstr "Sobreposição de título/legenda"
 
-#: src/Site/BlockLayout/Carousel.php:77
+#: src/Site/BlockLayout/Carousel.php:76
 msgid ""
 "Place title/caption over image (may require adjusting theme CSS text "
 "settings)"
@@ -57,45 +57,55 @@ msgstr ""
 "Coloque o título/legenda sobre a imagem (pode ser necessário ajustar as "
 "configurações de texto CSS do tema)"
 
-#: src/Site/BlockLayout/Carousel.php:87
+#: src/Site/BlockLayout/Carousel.php:86
 msgid "Text align"
 msgstr "Alinhamento de texto"
 
-#: src/Site/BlockLayout/Carousel.php:100
-msgid "Stretch Image"
-msgstr "Imagem esticada"
+#: src/Site/BlockLayout/Carousel.php:99
+msgid "Stretch image"
+msgstr ""
 
-#: src/Site/BlockLayout/Carousel.php:103
+#: src/Site/BlockLayout/Carousel.php:102
 msgid "Fill width"
 msgstr "Largura de preenchimento"
 
-#: src/Site/BlockLayout/Carousel.php:104
+#: src/Site/BlockLayout/Carousel.php:103
 msgid "Fill height"
 msgstr "Altura de preenchimento"
 
-#: src/Site/BlockLayout/Carousel.php:105
+#: src/Site/BlockLayout/Carousel.php:104
 msgid "Fill entire slide"
 msgstr "Preencher o slide inteiro"
 
+#: src/Site/BlockLayout/Carousel.php:113
+msgid "Breakpoint"
+msgstr ""
+
 #: src/Site/BlockLayout/Carousel.php:114
+msgid ""
+"Display one item per slide when carousel width drops below given pixel "
+"width. Adjust for mobile display, carousels with many items per page, etc."
+msgstr ""
+
+#: src/Site/BlockLayout/Carousel.php:122
 msgid "Auto slide duration"
 msgstr "Duração do slide automático"
 
-#: src/Site/BlockLayout/Carousel.php:115
+#: src/Site/BlockLayout/Carousel.php:123
 msgid ""
 "Time in milliseconds to pause before auto advance (set to 0 to turn off)"
 msgstr ""
 "Tempo em milissegundos para pausar antes do avanço automático (defina como 0"
 " para desligar)"
 
-#: src/Site/BlockLayout/Carousel.php:123
+#: src/Site/BlockLayout/Carousel.php:131
 msgid "Infinite loop"
 msgstr "Loop infinito"
 
-#: src/Site/BlockLayout/Carousel.php:142
+#: src/Site/BlockLayout/Carousel.php:150
 msgid "Fade between slides"
 msgstr "Desvanecer entre slides"
 
-#: src/Site/BlockLayout/Carousel.php:143
+#: src/Site/BlockLayout/Carousel.php:151
 msgid "Note: only works with 1 item per slide"
 msgstr ""

@@ -4,16 +4,16 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
-# Giorgio Comai <g@giorgiocomai.eu>, 2021
+# Giorgio Comai <g@giorgiocomai.eu>, 2024
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-06-20 14:37-0400\n"
+"POT-Creation-Date: 2025-05-29 10:02-0700\n"
 "PO-Revision-Date: 2021-07-13 17:32+0000\n"
-"Last-Translator: Giorgio Comai <g@giorgiocomai.eu>, 2021\n"
+"Last-Translator: Giorgio Comai <g@giorgiocomai.eu>, 2024\n"
 "Language-Team: Italian (https://app.transifex.com/omeka/teams/14184/it/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -21,35 +21,35 @@ msgstr ""
 "Language: it\n"
 "Plural-Forms: nplurals=3; plural=n == 1 ? 0 : n != 0 && n % 1000000 == 0 ? 1 : 2;\n"
 
-#: src/Site/BlockLayout/Carousel.php:171
+#: src/Site/BlockLayout/Carousel.php:180
 msgid "Advanced Options"
 msgstr "Opzioni avanzate"
 
-#: src/Site/BlockLayout/Carousel.php:18
+#: src/Site/BlockLayout/Carousel.php:16
 msgid "Item Carousel"
 msgstr "Contenuto carousel"
 
-#: src/Site/BlockLayout/Carousel.php:45
+#: src/Site/BlockLayout/Carousel.php:44
 msgid "Carousel title"
 msgstr "Titolo del carousel"
 
-#: src/Site/BlockLayout/Carousel.php:53
+#: src/Site/BlockLayout/Carousel.php:52
 msgid "Items per slide"
-msgstr ""
+msgstr "Contenuti per slide"
 
-#: src/Site/BlockLayout/Carousel.php:54
+#: src/Site/BlockLayout/Carousel.php:53
 msgid "The number of items shown per carousel slide"
-msgstr ""
+msgstr "Il numero di contenuti mostrati per ogni slide del carousel"
 
-#: src/Site/BlockLayout/Carousel.php:66
+#: src/Site/BlockLayout/Carousel.php:65
 msgid "Show attachment caption"
 msgstr "Mostra la didascalia dell'allegato"
 
-#: src/Site/BlockLayout/Carousel.php:76
+#: src/Site/BlockLayout/Carousel.php:75
 msgid "Overlay title/caption"
 msgstr "Sovrapponi titolo/didascalia"
 
-#: src/Site/BlockLayout/Carousel.php:77
+#: src/Site/BlockLayout/Carousel.php:76
 msgid ""
 "Place title/caption over image (may require adjusting theme CSS text "
 "settings)"
@@ -57,45 +57,55 @@ msgstr ""
 "Disponi titolo/didascalia sopra l'immagine (potrebbe esseci bisogno di "
 "adeguare le impostazioni CSS del tema)"
 
-#: src/Site/BlockLayout/Carousel.php:87
+#: src/Site/BlockLayout/Carousel.php:86
 msgid "Text align"
 msgstr "Allinea il testo"
 
-#: src/Site/BlockLayout/Carousel.php:100
-msgid "Stretch Image"
-msgstr "Allarga l'immagine"
+#: src/Site/BlockLayout/Carousel.php:99
+msgid "Stretch image"
+msgstr ""
 
-#: src/Site/BlockLayout/Carousel.php:103
+#: src/Site/BlockLayout/Carousel.php:102
 msgid "Fill width"
 msgstr "Adatta alla larghezza"
 
-#: src/Site/BlockLayout/Carousel.php:104
+#: src/Site/BlockLayout/Carousel.php:103
 msgid "Fill height"
 msgstr "Adatta all'altezza"
 
-#: src/Site/BlockLayout/Carousel.php:105
+#: src/Site/BlockLayout/Carousel.php:104
 msgid "Fill entire slide"
 msgstr "Adatta all'intera scheda"
 
+#: src/Site/BlockLayout/Carousel.php:113
+msgid "Breakpoint"
+msgstr ""
+
 #: src/Site/BlockLayout/Carousel.php:114
+msgid ""
+"Display one item per slide when carousel width drops below given pixel "
+"width. Adjust for mobile display, carousels with many items per page, etc."
+msgstr ""
+
+#: src/Site/BlockLayout/Carousel.php:122
 msgid "Auto slide duration"
 msgstr "Durata automatica di rotazione"
 
-#: src/Site/BlockLayout/Carousel.php:115
+#: src/Site/BlockLayout/Carousel.php:123
 msgid ""
 "Time in milliseconds to pause before auto advance (set to 0 to turn off)"
 msgstr ""
 "Tempo di attesa in millisecondi prima di avanzare (imposta a 0 per "
 "disattivare)"
 
-#: src/Site/BlockLayout/Carousel.php:123
+#: src/Site/BlockLayout/Carousel.php:131
 msgid "Infinite loop"
 msgstr "Rotazione infinita"
 
-#: src/Site/BlockLayout/Carousel.php:142
+#: src/Site/BlockLayout/Carousel.php:150
 msgid "Fade between slides"
 msgstr "Sfuma tra le schede"
 
-#: src/Site/BlockLayout/Carousel.php:143
+#: src/Site/BlockLayout/Carousel.php:151
 msgid "Note: only works with 1 item per slide"
-msgstr ""
+msgstr "N.B.: funziona solo con un singolo contenuto per slide"
