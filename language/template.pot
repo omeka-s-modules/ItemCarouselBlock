@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-06-20 14:37-0400\n"
+"POT-Creation-Date: 2025-05-29 10:02-0700\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,77 +17,87 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: src/Site/BlockLayout/Carousel.php:171
+#: src/Site/BlockLayout/Carousel.php:180
 msgid "Advanced Options"
 msgstr ""
 
-#: src/Site/BlockLayout/Carousel.php:18
+#: src/Site/BlockLayout/Carousel.php:16
 msgid "Item Carousel"
 msgstr ""
 
-#: src/Site/BlockLayout/Carousel.php:45
+#: src/Site/BlockLayout/Carousel.php:44
 msgid "Carousel title"
 msgstr ""
 
-#: src/Site/BlockLayout/Carousel.php:53
+#: src/Site/BlockLayout/Carousel.php:52
 msgid "Items per slide"
 msgstr ""
 
-#: src/Site/BlockLayout/Carousel.php:54
+#: src/Site/BlockLayout/Carousel.php:53
 msgid "The number of items shown per carousel slide"
 msgstr ""
 
-#: src/Site/BlockLayout/Carousel.php:66
+#: src/Site/BlockLayout/Carousel.php:65
 msgid "Show attachment caption"
 msgstr ""
 
-#: src/Site/BlockLayout/Carousel.php:76
+#: src/Site/BlockLayout/Carousel.php:75
 msgid "Overlay title/caption"
 msgstr ""
 
-#: src/Site/BlockLayout/Carousel.php:77
+#: src/Site/BlockLayout/Carousel.php:76
 msgid ""
 "Place title/caption over image (may require adjusting theme CSS text "
 "settings)"
 msgstr ""
 
-#: src/Site/BlockLayout/Carousel.php:87
+#: src/Site/BlockLayout/Carousel.php:86
 msgid "Text align"
 msgstr ""
 
-#: src/Site/BlockLayout/Carousel.php:100
-msgid "Stretch Image"
+#: src/Site/BlockLayout/Carousel.php:99
+msgid "Stretch image"
 msgstr ""
 
-#: src/Site/BlockLayout/Carousel.php:103
+#: src/Site/BlockLayout/Carousel.php:102
 msgid "Fill width"
 msgstr ""
 
-#: src/Site/BlockLayout/Carousel.php:104
+#: src/Site/BlockLayout/Carousel.php:103
 msgid "Fill height"
 msgstr ""
 
-#: src/Site/BlockLayout/Carousel.php:105
+#: src/Site/BlockLayout/Carousel.php:104
 msgid "Fill entire slide"
 msgstr ""
 
+#: src/Site/BlockLayout/Carousel.php:113
+msgid "Breakpoint"
+msgstr ""
+
 #: src/Site/BlockLayout/Carousel.php:114
+msgid ""
+"Display one item per slide when carousel width drops below given pixel "
+"width. Adjust for mobile display, carousels with many items per page, etc."
+msgstr ""
+
+#: src/Site/BlockLayout/Carousel.php:122
 msgid "Auto slide duration"
 msgstr ""
 
-#: src/Site/BlockLayout/Carousel.php:115
+#: src/Site/BlockLayout/Carousel.php:123
 msgid ""
 "Time in milliseconds to pause before auto advance (set to 0 to turn off)"
 msgstr ""
 
-#: src/Site/BlockLayout/Carousel.php:123
+#: src/Site/BlockLayout/Carousel.php:131
 msgid "Infinite loop"
 msgstr ""
 
-#: src/Site/BlockLayout/Carousel.php:142
+#: src/Site/BlockLayout/Carousel.php:150
 msgid "Fade between slides"
 msgstr ""
 
-#: src/Site/BlockLayout/Carousel.php:143
+#: src/Site/BlockLayout/Carousel.php:151
 msgid "Note: only works with 1 item per slide"
 msgstr ""
