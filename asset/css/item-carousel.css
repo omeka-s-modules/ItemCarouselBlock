@@ -1,5 +1,9 @@
 @charset "UTF-8";
 
+.page-layout-grid .block-carousel {
+    min-width: 0;
+}
+
 .carousel-block {
     position: relative;
     padding-bottom: 25px;
